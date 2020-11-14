@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Component class="org.joda.time.LocalTime" name="localTime1">
+    </Component>
+    <Component class="org.joda.time.LocalTime" name="localTime2">
+    </Component>
+    <Component class="org.joda.time.DateTime" name="dateTime1">
+    </Component>
+    <Component class="org.joda.time.DateTime" name="dateTime2">
+    </Component>
+    <Component class="org.joda.time.LocalDate" name="localDate1">
+    </Component>
+    <Component class="org.joda.time.LocalDateTime" name="localDateTime1">
+    </Component>
+    <Component class="org.joda.time.LocalTime" name="localTime3">
+    </Component>
+    <Component class="org.joda.time.LocalTime" name="localTime4">
+    </Component>
+    <Component class="org.joda.time.Period" name="period1">
+    </Component>
+    <Component class="org.joda.time.TimeOfDay" name="timeOfDay1">
+    </Component>
+    <Component class="org.joda.time.Period" name="period2">
+    </Component>
+    <Component class="org.joda.time.LocalTime" name="localTime5">
+    </Component>
+    <Component class="org.joda.time.LocalDate" name="localDate2">
+    </Component>
+    <Component class="org.joda.time.LocalDateTime" name="localDateTime2">
+    </Component>
+    <Component class="org.joda.time.DateTime" name="dateTime3">
+    </Component>
+    <Component class="org.joda.time.tz.DateTimeZoneBuilder" name="dateTimeZoneBuilder1">
+    </Component>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -229,7 +263,10 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jButton6" min="-2" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jTimeChooser1" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jTimeChooser1" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                                      </Group>
                                       <Component id="jTextField1" max="32767" attributes="0"/>
                                       <Component id="jTextField2" max="32767" attributes="0"/>
                                       <Component id="jDateChooser1" alignment="0" pref="221" max="32767" attributes="0"/>
@@ -355,17 +392,11 @@
                       </AccessibilityProperties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jTextField1">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="jTextField1"/>
-                      </Properties>
                       <AccessibilityProperties>
                         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="txtName"/>
                       </AccessibilityProperties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jTextField2">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="jTextField2"/>
-                      </Properties>
                       <AccessibilityProperties>
                         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="txtNic"/>
                       </AccessibilityProperties>
@@ -381,25 +412,16 @@
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jTextField3">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="jTextField3"/>
-                      </Properties>
                       <AccessibilityProperties>
                         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="txtPurpose"/>
                       </AccessibilityProperties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jTextField4">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="jTextField4"/>
-                      </Properties>
                       <AccessibilityProperties>
                         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="txtInventory"/>
                       </AccessibilityProperties>
                     </Component>
                     <Component class="javax.swing.JTextField" name="jTextField5">
-                      <Properties>
-                        <Property name="text" type="java.lang.String" value="jTextField5"/>
-                      </Properties>
                       <AccessibilityProperties>
                         <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="txtPhoneNo"/>
                       </AccessibilityProperties>

@@ -27,6 +27,22 @@ public class MainApplication extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        localTime1 = new org.joda.time.LocalTime();
+        localTime2 = new org.joda.time.LocalTime();
+        dateTime1 = new org.joda.time.DateTime();
+        dateTime2 = new org.joda.time.DateTime();
+        localDate1 = new org.joda.time.LocalDate();
+        localDateTime1 = new org.joda.time.LocalDateTime();
+        localTime3 = new org.joda.time.LocalTime();
+        localTime4 = new org.joda.time.LocalTime();
+        period1 = new org.joda.time.Period();
+        timeOfDay1 = new org.joda.time.TimeOfDay();
+        period2 = new org.joda.time.Period();
+        localTime5 = new org.joda.time.LocalTime();
+        localDate2 = new org.joda.time.LocalDate();
+        localDateTime2 = new org.joda.time.LocalDateTime();
+        dateTime3 = new org.joda.time.DateTime();
+        dateTimeZoneBuilder1 = new org.joda.time.tz.DateTimeZoneBuilder();
         panel_base = new javax.swing.JPanel();
         panel_top = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -167,17 +183,7 @@ public class MainApplication extends javax.swing.JFrame {
 
         jLabel12.setText("Phone No");
 
-        jTextField1.setText("jTextField1");
-
-        jTextField2.setText("jTextField2");
-
         jTimeChooser1.setName("jTime"); // NOI18N
-
-        jTextField3.setText("jTextField3");
-
-        jTextField4.setText("jTextField4");
-
-        jTextField5.setText("jTextField5");
 
         jButton6.setText("Submit");
 
@@ -199,7 +205,9 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton6)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jTimeChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(jTimeChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(46, 46, 46))
                         .addComponent(jTextField1)
                         .addComponent(jTextField2)
                         .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, 221, Short.MAX_VALUE)
@@ -412,6 +420,10 @@ public class MainApplication extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private org.joda.time.DateTime dateTime1;
+    private org.joda.time.DateTime dateTime2;
+    private org.joda.time.DateTime dateTime3;
+    private org.joda.time.tz.DateTimeZoneBuilder dateTimeZoneBuilder1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -444,8 +456,20 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField5;
     private lu.tudor.santec.jtimechooser.JTimeChooser jTimeChooser1;
     private javax.swing.JToolBar jToolBar1;
+    private org.joda.time.LocalDate localDate1;
+    private org.joda.time.LocalDate localDate2;
+    private org.joda.time.LocalDateTime localDateTime1;
+    private org.joda.time.LocalDateTime localDateTime2;
+    private org.joda.time.LocalTime localTime1;
+    private org.joda.time.LocalTime localTime2;
+    private org.joda.time.LocalTime localTime3;
+    private org.joda.time.LocalTime localTime4;
+    private org.joda.time.LocalTime localTime5;
     private javax.swing.JPanel panel_base;
     private javax.swing.JPanel panel_left;
     private javax.swing.JPanel panel_top;
+    private org.joda.time.Period period1;
+    private org.joda.time.Period period2;
+    private org.joda.time.TimeOfDay timeOfDay1;
     // End of variables declaration//GEN-END:variables
 }
