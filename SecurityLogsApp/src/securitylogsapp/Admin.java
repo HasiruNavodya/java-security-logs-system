@@ -3,8 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package securitylogsapp;
+
+import java.sql.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -34,9 +38,11 @@ public class Admin extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jTextField1 = new javax.swing.JTextField();
+        txtAdminPassword = new javax.swing.JPasswordField();
+        txtAdminName = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jButtonCancel = new javax.swing.JButton();
+        jButtonReset = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -61,11 +67,30 @@ public class Admin extends javax.swing.JFrame {
 
         jLabel4.setText("Password");
 
-        jPasswordField1.setText("jPasswordField1");
+        txtAdminPassword.setText("jPasswordField1");
 
-        jTextField1.setText("jTextField1");
+        txtAdminName.setText("jTextField1");
 
         jButton1.setText("Login");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButtonCancel.setText("Cancel");
+        jButtonCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCancelActionPerformed(evt);
+            }
+        });
+
+        jButtonReset.setText("Reset");
+        jButtonReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonResetActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -82,11 +107,16 @@ public class Admin extends javax.swing.JFrame {
                     .addComponent(jLabel3))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(jButtonReset)
+                        .addGap(29, 29, 29)
+                        .addComponent(jButtonCancel))
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel2)
-                        .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
-                        .addComponent(jTextField1)))
+                        .addComponent(txtAdminPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                        .addComponent(txtAdminName)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -98,19 +128,22 @@ public class Admin extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addGap(60, 60, 60)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAdminName, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addGap(39, 39, 39)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtAdminPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addGap(40, 40, 40)
-                .addComponent(jButton1)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButtonCancel)
+                    .addComponent(jButtonReset))
                 .addContainerGap(148, Short.MAX_VALUE))
         );
 
-        jPasswordField1.getAccessibleContext().setAccessibleName("txtAdminPassword");
-        jTextField1.getAccessibleContext().setAccessibleName("txtAdminName");
+        txtAdminPassword.getAccessibleContext().setAccessibleName("txtAdminPassword");
+        txtAdminName.getAccessibleContext().setAccessibleName("");
         jButton1.getAccessibleContext().setAccessibleName("jButtonLogin");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -126,12 +159,65 @@ public class Admin extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jPanel2.getAccessibleContext().setAccessibleName("");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            
+
+            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+
+            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+
+            String sql = "Select * from admin where Name = ? and Password=?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, txtAdminName.getText());
+            pst.setString(2, txtAdminPassword.getText());
+            ResultSet rs = pst.executeQuery();
+            if (rs.next())
+            {
+                JOptionPane.showMessageDialog(null, "Username and Password matched");
+                MainApplication m1 = new MainApplication();
+                m1.setVisible(true);
+            }
+            else
+            {
+                  JOptionPane.showMessageDialog(null, "Username and Password not matched");
+                  txtAdminName.setText("");
+                  txtAdminPassword.setText("");
+            }
+            
+            con.close();
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+        
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jButtonCancelActionPerformed
+
+    private void jButtonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResetActionPerformed
+        // TODO add your handling code here:
+        txtAdminName.setText("");
+        txtAdminPassword.setText("");
+    }//GEN-LAST:event_jButtonResetActionPerformed
+
     /**
-     * @param args the command line arguments
-     */
+         * @param args the command line arguments
+         */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -166,13 +252,15 @@ public class Admin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonCancel;
+    private javax.swing.JButton jButtonReset;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txtAdminName;
+    private javax.swing.JPasswordField txtAdminPassword;
     // End of variables declaration//GEN-END:variables
 }
