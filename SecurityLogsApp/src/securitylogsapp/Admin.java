@@ -67,10 +67,6 @@ public class Admin extends javax.swing.JFrame {
 
         jLabel4.setText("Password");
 
-        txtAdminPassword.setText("jPasswordField1");
-
-        txtAdminName.setText("jTextField1");
-
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

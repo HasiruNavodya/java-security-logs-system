@@ -147,17 +147,11 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JPasswordField" name="txtAdminPassword">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jPasswordField1"/>
-          </Properties>
           <AccessibilityProperties>
             <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="txtAdminPassword"/>
           </AccessibilityProperties>
         </Component>
         <Component class="javax.swing.JTextField" name="txtAdminName">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="jTextField1"/>
-          </Properties>
           <AccessibilityProperties>
             <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
           </AccessibilityProperties>
