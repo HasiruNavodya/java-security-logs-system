@@ -1,40 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.9" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
-  <NonVisualComponents>
-    <Component class="org.joda.time.LocalTime" name="localTime1">
-    </Component>
-    <Component class="org.joda.time.LocalTime" name="localTime2">
-    </Component>
-    <Component class="org.joda.time.DateTime" name="dateTime1">
-    </Component>
-    <Component class="org.joda.time.DateTime" name="dateTime2">
-    </Component>
-    <Component class="org.joda.time.LocalDate" name="localDate1">
-    </Component>
-    <Component class="org.joda.time.LocalDateTime" name="localDateTime1">
-    </Component>
-    <Component class="org.joda.time.LocalTime" name="localTime3">
-    </Component>
-    <Component class="org.joda.time.LocalTime" name="localTime4">
-    </Component>
-    <Component class="org.joda.time.Period" name="period1">
-    </Component>
-    <Component class="org.joda.time.TimeOfDay" name="timeOfDay1">
-    </Component>
-    <Component class="org.joda.time.Period" name="period2">
-    </Component>
-    <Component class="org.joda.time.LocalTime" name="localTime5">
-    </Component>
-    <Component class="org.joda.time.LocalDate" name="localDate2">
-    </Component>
-    <Component class="org.joda.time.LocalDateTime" name="localDateTime2">
-    </Component>
-    <Component class="org.joda.time.DateTime" name="dateTime3">
-    </Component>
-    <Component class="org.joda.time.tz.DateTimeZoneBuilder" name="dateTimeZoneBuilder1">
-    </Component>
-  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -218,7 +184,7 @@
               </AccessibilityProperties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="-30" width="1160" height="630"/>
+                  <AbsoluteConstraints x="0" y="0" width="1160" height="600"/>
                 </Constraint>
               </Constraints>
 
@@ -290,11 +256,9 @@
                                           </Group>
                                           <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jTimeChooser1" alignment="0" min="-2" max="-2" attributes="0"/>
                                               <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                                   <Component id="jTextField1" alignment="0" max="32767" attributes="0"/>
                                                   <Component id="jTextField2" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="jDateChooser1" alignment="0" max="32767" attributes="0"/>
                                                   <Component id="jScrollPane1" max="32767" attributes="0"/>
                                                   <Component id="jTextField3" alignment="0" min="-2" pref="237" max="-2" attributes="0"/>
                                               </Group>
@@ -325,16 +289,10 @@
                                       <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="jDateChooser1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel5" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTimeChooser1" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  </Group>
+                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -402,11 +360,6 @@
                             <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="jLabelDate"/>
                           </AccessibilityProperties>
                         </Component>
-                        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser1">
-                          <AccessibilityProperties>
-                            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="jDate"/>
-                          </AccessibilityProperties>
-                        </Component>
                         <Component class="javax.swing.JLabel" name="jLabel5">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Time"/>
@@ -414,11 +367,6 @@
                           <AccessibilityProperties>
                             <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="jLabelTime"/>
                           </AccessibilityProperties>
-                        </Component>
-                        <Component class="lu.tudor.santec.jtimechooser.JTimeChooser" name="jTimeChooser1">
-                          <Properties>
-                            <Property name="name" type="java.lang.String" value="jTime" noResource="true"/>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel6">
                           <Properties>
@@ -498,13 +446,7 @@
                                               <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <Component id="jTimeChooser2" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                              </Group>
-                                              <Component id="jTextField6" max="32767" attributes="0"/>
-                                          </Group>
+                                          <Component id="jTextField6" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
@@ -522,11 +464,8 @@
                                       <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTimeChooser2" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace pref="121" max="32767" attributes="0"/>
+                                  <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="77" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -543,11 +482,6 @@
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="jTextField6">
-                        </Component>
-                        <Component class="lu.tudor.santec.jtimechooser.JTimeChooser" name="jTimeChooser2">
-                          <Properties>
-                            <Property name="name" type="java.lang.String" value="jTime" noResource="true"/>
-                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel15">
                           <Properties>
@@ -576,7 +510,7 @@
                                           <Component id="jButton7" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="230" max="32767" attributes="0"/>
+                                  <EmptySpace pref="199" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -665,7 +599,7 @@
                                       <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                       <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="47" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -939,16 +873,21 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="jPanel10" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jPanel5" max="32767" attributes="0"/>
-                                      <Component id="jPanel9" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="jPanel9" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                      <Component id="jPanel10" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="810" max="32767" attributes="0"/>
+                              <EmptySpace pref="795" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -959,9 +898,9 @@
                               <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="18" max="32767" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jPanel10" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -986,7 +925,7 @@
                                       <Component id="jTextField11" alignment="0" pref="133" max="32767" attributes="0"/>
                                       <Component id="jTextField12" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="80" max="32767" attributes="0"/>
+                                  <EmptySpace pref="85" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
