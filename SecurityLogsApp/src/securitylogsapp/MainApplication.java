@@ -5,6 +5,14 @@
  */
 package securitylogsapp;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import javax.swing.Timer;
+
 /**
  *
  * @author HNMP
@@ -16,7 +24,39 @@ public class MainApplication extends javax.swing.JFrame {
      */
     public MainApplication() {
         initComponents();
+        showDate();
+        showTime();
     }
+    
+    void showDate()
+    {
+               DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+               LocalDateTime now = LocalDateTime.now();
+               
+               //Visitors CheckIn Date
+               jLabelVisitorCheckInDate.setText(dtf.format(now));
+               
+               //No Id Issued CheckIn, CheckOut Date
+               jLabelIdIssuedCheckInDate.setText(dtf.format(now));
+               jLabelIdIssuedCheckOutDate.setText(dtf.format(now));
+        
+    }
+    
+      void showTime()
+    {
+      
+               DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss a");
+               LocalDateTime now = LocalDateTime.now();
+               //visitors CheckIN, CheckOut time
+               jLabelVisitorCheckInTime.setText(dtf.format(now));
+               jLabelVisitorCheckOutTime.setText(dtf.format(now));
+               
+               //No ID Issued CheckIN, Check out time
+               jLabelIdIssuedCheckInTime.setText(dtf.format(now));
+               jLabelIdIssuedCheckOutTime.setText(dtf.format(now));
+        
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -55,11 +95,14 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jTextField5 = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
+        jLabelVisitorCheckInDate = new javax.swing.JLabel();
+        jLabelVisitorCheckInTime = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
+        jLabelVisitorCheckOutTime = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -130,6 +173,8 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
         jButton15 = new javax.swing.JButton();
+        jLabelIdIssuedCheckOutDate = new javax.swing.JLabel();
+        jLabelIdIssuedCheckOutTime = new javax.swing.JLabel();
         jPanel13 = new javax.swing.JPanel();
         jLabel42 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
@@ -137,6 +182,8 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel47 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
         jButton16 = new javax.swing.JButton();
+        jLabelIdIssuedCheckInDate = new javax.swing.JLabel();
+        jLabelIdIssuedCheckInTime = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
         jLabel50 = new javax.swing.JLabel();
@@ -217,7 +264,7 @@ public class MainApplication extends javax.swing.JFrame {
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(333, Short.MAX_VALUE))
+                .addContainerGap(334, Short.MAX_VALUE))
         );
 
         jButton1.getAccessibleContext().setAccessibleName("jButtonVisitors");
@@ -283,7 +330,10 @@ public class MainApplication extends javax.swing.JFrame {
                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel6Layout.createSequentialGroup()
                                 .addGap(34, 34, 34)
-                                .addComponent(jButton6)))))
+                                .addComponent(jButton6))
+                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabelVisitorCheckInTime, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+                                .addComponent(jLabelVisitorCheckInDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -299,11 +349,15 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addGap(14, 14, 14)
-                .addComponent(jLabel4)
-                .addGap(14, 14, 14)
-                .addComponent(jLabel5)
-                .addGap(11, 11, 11)
+                .addGap(10, 10, 10)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabelVisitorCheckInDate, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabelVisitorCheckInTime, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
@@ -320,7 +374,7 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(jLabel12))
                 .addGap(18, 18, 18)
                 .addComponent(jButton6)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         jLabel2.getAccessibleContext().setAccessibleName("jLabelName");
@@ -360,7 +414,11 @@ public class MainApplication extends javax.swing.JFrame {
                             .addComponent(jLabel14)
                             .addComponent(jLabel15))
                         .addGap(33, 33, 33)
-                        .addComponent(jTextField6)))
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField6)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(jLabelVisitorCheckOutTime, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
@@ -372,9 +430,11 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jLabel15)
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabelVisitorCheckOutTime, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
+                .addContainerGap(133, Short.MAX_VALUE))
         );
 
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -403,7 +463,7 @@ public class MainApplication extends javax.swing.JFrame {
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton7)))
-                .addContainerGap(226, Short.MAX_VALUE))
+                .addContainerGap(195, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -415,7 +475,7 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(jLabel17)
                     .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton7))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(545, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panel_visitLayout = new javax.swing.GroupLayout(panel_visit);
@@ -933,7 +993,11 @@ public class MainApplication extends javax.swing.JFrame {
                                     .addComponent(jLabel44, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel45, javax.swing.GroupLayout.Alignment.TRAILING))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                        .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabelIdIssuedCheckOutTime, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                                .addComponent(jLabelIdIssuedCheckOutDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap())
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addGap(128, 128, 128)
@@ -950,12 +1014,16 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(jLabel43)
                     .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
-                .addComponent(jLabel44)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel45)
-                .addGap(53, 53, 53)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel44)
+                    .addComponent(jLabelIdIssuedCheckOutDate, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel45)
+                    .addComponent(jLabelIdIssuedCheckOutTime, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(56, 56, 56)
                 .addComponent(jButton15)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         panel_noid.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, 250));
@@ -979,9 +1047,6 @@ public class MainApplication extends javax.swing.JFrame {
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addGap(156, 156, 156)
-                        .addComponent(jLabel42))
-                    .addGroup(jPanel13Layout.createSequentialGroup()
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel13Layout.createSequentialGroup()
                                 .addGap(19, 19, 19)
@@ -992,12 +1057,21 @@ public class MainApplication extends javax.swing.JFrame {
                                     .addComponent(jLabel47, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel48, javax.swing.GroupLayout.Alignment.TRAILING))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                        .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabelIdIssuedCheckInTime, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
+                                .addComponent(jLabelIdIssuedCheckInDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addGap(156, 156, 156)
+                                .addComponent(jLabel42))
+                            .addGroup(jPanel13Layout.createSequentialGroup()
+                                .addGap(128, 128, 128)
+                                .addComponent(jButton16)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addGap(128, 128, 128)
-                .addComponent(jButton16)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1008,13 +1082,17 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel46)
                     .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addComponent(jLabel47)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel48)
+                .addGap(16, 16, 16)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel47)
+                    .addComponent(jLabelIdIssuedCheckInDate, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel48)
+                    .addComponent(jLabelIdIssuedCheckInTime, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
                 .addGap(53, 53, 53)
                 .addComponent(jButton16)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         panel_noid.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, 250));
@@ -1062,9 +1140,9 @@ public class MainApplication extends javax.swing.JFrame {
 
         panel_noid.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, 760, 540));
 
-        jTabbedPane1.addTab("No ID Issuded", panel_noid);
+        jTabbedPane1.addTab("No ID Issued", panel_noid);
 
-        jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1160, 590));
+        jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1160, 660));
         jTabbedPane1.getAccessibleContext().setAccessibleName("tab1");
 
         panel_base.add(jPanel1, java.awt.BorderLayout.CENTER);
@@ -1214,6 +1292,13 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabelIdIssuedCheckInDate;
+    private javax.swing.JLabel jLabelIdIssuedCheckInTime;
+    private javax.swing.JLabel jLabelIdIssuedCheckOutDate;
+    private javax.swing.JLabel jLabelIdIssuedCheckOutTime;
+    private javax.swing.JLabel jLabelVisitorCheckInDate;
+    private javax.swing.JLabel jLabelVisitorCheckInTime;
+    private javax.swing.JLabel jLabelVisitorCheckOutTime;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
