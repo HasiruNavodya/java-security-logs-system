@@ -27,22 +27,6 @@ public class MainApplication extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        localTime1 = new org.joda.time.LocalTime();
-        localTime2 = new org.joda.time.LocalTime();
-        dateTime1 = new org.joda.time.DateTime();
-        dateTime2 = new org.joda.time.DateTime();
-        localDate1 = new org.joda.time.LocalDate();
-        localDateTime1 = new org.joda.time.LocalDateTime();
-        localTime3 = new org.joda.time.LocalTime();
-        localTime4 = new org.joda.time.LocalTime();
-        period1 = new org.joda.time.Period();
-        timeOfDay1 = new org.joda.time.TimeOfDay();
-        period2 = new org.joda.time.Period();
-        localTime5 = new org.joda.time.LocalTime();
-        localDate2 = new org.joda.time.LocalDate();
-        localDateTime2 = new org.joda.time.LocalDateTime();
-        dateTime3 = new org.joda.time.DateTime();
-        dateTimeZoneBuilder1 = new org.joda.time.tz.DateTimeZoneBuilder();
         panel_base = new javax.swing.JPanel();
         panel_top = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -62,9 +46,7 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel5 = new javax.swing.JLabel();
-        jTimeChooser1 = new lu.tudor.santec.jtimechooser.JTimeChooser();
         jLabel6 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
@@ -77,12 +59,11 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
-        jTimeChooser2 = new lu.tudor.santec.jtimechooser.JTimeChooser();
         jLabel15 = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jComboBox1 = new javax.swing.JComboBox<String>();
         jButton7 = new javax.swing.JButton();
         panel_parking = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -104,7 +85,7 @@ public class MainApplication extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBox2 = new javax.swing.JComboBox<String>();
         jButton10 = new javax.swing.JButton();
         panel_lost = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
@@ -139,7 +120,7 @@ public class MainApplication extends javax.swing.JFrame {
         jPanel11 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBox3 = new javax.swing.JComboBox<String>();
         jButton14 = new javax.swing.JButton();
         panel_noid = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
@@ -147,23 +128,19 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel43 = new javax.swing.JLabel();
         jTextField21 = new javax.swing.JTextField();
         jLabel44 = new javax.swing.JLabel();
-        jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jLabel45 = new javax.swing.JLabel();
-        jTimeChooser3 = new lu.tudor.santec.jtimechooser.JTimeChooser();
         jButton15 = new javax.swing.JButton();
         jPanel13 = new javax.swing.JPanel();
         jLabel42 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
         jTextField22 = new javax.swing.JTextField();
         jLabel47 = new javax.swing.JLabel();
-        jDateChooser3 = new com.toedter.calendar.JDateChooser();
         jLabel48 = new javax.swing.JLabel();
-        jTimeChooser4 = new lu.tudor.santec.jtimechooser.JTimeChooser();
         jButton16 = new javax.swing.JButton();
         jPanel14 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
         jLabel50 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        jComboBox4 = new javax.swing.JComboBox<String>();
         jButton17 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -265,8 +242,6 @@ public class MainApplication extends javax.swing.JFrame {
 
         jLabel5.setText("Time");
 
-        jTimeChooser1.setName("jTime"); // NOI18N
-
         jLabel6.setText("Purpose");
 
         jLabel8.setText("Inventory");
@@ -300,11 +275,9 @@ public class MainApplication extends javax.swing.JFrame {
                             .addComponent(jLabel2))
                         .addGap(36, 36, 36)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTimeChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jDateChooser1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jScrollPane1)
                                 .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -326,14 +299,10 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTimeChooser1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
+                .addComponent(jLabel4)
+                .addGap(14, 14, 14)
+                .addComponent(jLabel5)
                 .addGap(11, 11, 11)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -359,7 +328,6 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel3.getAccessibleContext().setAccessibleName("jLabelNicNo");
         jTextField2.getAccessibleContext().setAccessibleName("txtNic");
         jLabel4.getAccessibleContext().setAccessibleName("jLabelDate");
-        jDateChooser1.getAccessibleContext().setAccessibleName("jDate");
         jLabel5.getAccessibleContext().setAccessibleName("jLabelTime");
         jLabel6.getAccessibleContext().setAccessibleName("jLabelPurpose");
         jTextField3.getAccessibleContext().setAccessibleName("txtPurpose");
@@ -373,8 +341,6 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel13.setText("Check Out");
 
         jLabel14.setText("NIC Number");
-
-        jTimeChooser2.setName("jTime"); // NOI18N
 
         jLabel15.setText("Time");
 
@@ -394,11 +360,7 @@ public class MainApplication extends javax.swing.JFrame {
                             .addComponent(jLabel14)
                             .addComponent(jLabel15))
                         .addGap(33, 33, 33)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jTimeChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jTextField6))))
+                        .addComponent(jTextField6)))
                 .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
@@ -411,10 +373,8 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(jLabel14)
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel15)
-                    .addComponent(jTimeChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(117, Short.MAX_VALUE))
+                .addComponent(jLabel15)
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -423,7 +383,7 @@ public class MainApplication extends javax.swing.JFrame {
 
         jLabel17.setText("Search by :");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All Entries", "Chronological", "Arrived", "Departed" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "All Entries", "Chronological", "Arrived", "Departed" }));
 
         jButton7.setText("Search");
 
@@ -606,7 +566,7 @@ public class MainApplication extends javax.swing.JFrame {
 
         jLabel27.setText("Search By: ");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Parked", "Took off", "by spot number" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Parked", "Took off", "by spot number" }));
 
         jButton10.setText("Show");
 
@@ -664,7 +624,7 @@ public class MainApplication extends javax.swing.JFrame {
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(28, 28, 28)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 41, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -873,7 +833,7 @@ public class MainApplication extends javax.swing.JFrame {
 
         jLabel40.setText("Search By: ");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Lost", "Found", "Resolved" }));
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Lost", "Found", "Resolved" }));
 
         jButton14.setText("Show");
 
@@ -951,8 +911,6 @@ public class MainApplication extends javax.swing.JFrame {
 
         jLabel45.setText("Time");
 
-        jTimeChooser3.setName("jTime"); // NOI18N
-
         jButton15.setText("Submit");
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
@@ -974,16 +932,8 @@ public class MainApplication extends javax.swing.JFrame {
                                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel44, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel45, javax.swing.GroupLayout.Alignment.TRAILING))))
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel12Layout.createSequentialGroup()
-                                .addGap(36, 36, 36)
-                                .addComponent(jTimeChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jDateChooser2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField21, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE))))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                        .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addGap(128, 128, 128)
@@ -999,17 +949,13 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel43)
                     .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addComponent(jLabel44)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel44)
-                    .addComponent(jDateChooser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTimeChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel45))
-                .addGap(51, 51, 51)
+                .addComponent(jLabel45)
+                .addGap(53, 53, 53)
                 .addComponent(jButton15)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         panel_noid.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, 250));
@@ -1023,8 +969,6 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel47.setText("Date");
 
         jLabel48.setText("Time");
-
-        jTimeChooser4.setName("jTime"); // NOI18N
 
         jButton16.setText("Submit");
 
@@ -1047,16 +991,8 @@ public class MainApplication extends javax.swing.JFrame {
                                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel47, javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel48, javax.swing.GroupLayout.Alignment.TRAILING))))
-                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel13Layout.createSequentialGroup()
-                                .addGap(36, 36, 36)
-                                .addComponent(jTimeChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jDateChooser3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE))))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                        .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addGap(128, 128, 128)
@@ -1072,17 +1008,13 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel46)
                     .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addComponent(jLabel47)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel47)
-                    .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTimeChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel48))
-                .addGap(51, 51, 51)
+                .addComponent(jLabel48)
+                .addGap(53, 53, 53)
                 .addComponent(jButton16)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         panel_noid.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, 250));
@@ -1093,7 +1025,7 @@ public class MainApplication extends javax.swing.JFrame {
 
         jLabel50.setText("Search By: ");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "In Campus", "Left", "Chronological" }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "In Campus", "Left", "Chronological" }));
 
         jButton17.setText("Show");
 
@@ -1132,7 +1064,7 @@ public class MainApplication extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("No ID Issuded", panel_noid);
 
-        jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 1160, 630));
+        jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1160, 590));
         jTabbedPane1.getAccessibleContext().setAccessibleName("tab1");
 
         panel_base.add(jPanel1, java.awt.BorderLayout.CENTER);
@@ -1145,7 +1077,7 @@ public class MainApplication extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_base, javax.swing.GroupLayout.DEFAULT_SIZE, 759, Short.MAX_VALUE)
+            .addComponent(panel_base, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -1153,7 +1085,7 @@ public class MainApplication extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        jTabbedPane1.setSelectedIndex(2);
+        jTabbedPane1.setSelectedIndex(0);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -1163,17 +1095,17 @@ public class MainApplication extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        jTabbedPane1.setSelectedIndex(4);
+        jTabbedPane1.setSelectedIndex(2);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        jTabbedPane1.setSelectedIndex(5);
+        jTabbedPane1.setSelectedIndex(1);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        jTabbedPane1.setSelectedIndex(6);
+        jTabbedPane1.setSelectedIndex(4);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     /**
@@ -1212,10 +1144,6 @@ public class MainApplication extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private org.joda.time.DateTime dateTime1;
-    private org.joda.time.DateTime dateTime2;
-    private org.joda.time.DateTime dateTime3;
-    private org.joda.time.tz.DateTimeZoneBuilder dateTimeZoneBuilder1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -1237,9 +1165,6 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JComboBox<String> jComboBox4;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
-    private com.toedter.calendar.JDateChooser jDateChooser2;
-    private com.toedter.calendar.JDateChooser jDateChooser3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1327,19 +1252,6 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
-    private lu.tudor.santec.jtimechooser.JTimeChooser jTimeChooser1;
-    private lu.tudor.santec.jtimechooser.JTimeChooser jTimeChooser2;
-    private lu.tudor.santec.jtimechooser.JTimeChooser jTimeChooser3;
-    private lu.tudor.santec.jtimechooser.JTimeChooser jTimeChooser4;
-    private org.joda.time.LocalDate localDate1;
-    private org.joda.time.LocalDate localDate2;
-    private org.joda.time.LocalDateTime localDateTime1;
-    private org.joda.time.LocalDateTime localDateTime2;
-    private org.joda.time.LocalTime localTime1;
-    private org.joda.time.LocalTime localTime2;
-    private org.joda.time.LocalTime localTime3;
-    private org.joda.time.LocalTime localTime4;
-    private org.joda.time.LocalTime localTime5;
     private javax.swing.JPanel panel_base;
     private javax.swing.JPanel panel_left;
     private javax.swing.JPanel panel_lost;
@@ -1347,8 +1259,5 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JPanel panel_parking;
     private javax.swing.JPanel panel_top;
     private javax.swing.JPanel panel_visit;
-    private org.joda.time.Period period1;
-    private org.joda.time.Period period2;
-    private org.joda.time.TimeOfDay timeOfDay1;
     // End of variables declaration//GEN-END:variables
 }
