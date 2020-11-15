@@ -62,7 +62,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="panel_base" alignment="0" max="32767" attributes="0"/>
+          <Component id="panel_base" alignment="0" pref="759" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -138,7 +138,7 @@
                       <Component id="jButton2" min="-2" pref="51" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="jButton5" min="-2" pref="50" max="-2" attributes="0"/>
-                      <EmptySpace pref="264" max="32767" attributes="0"/>
+                      <EmptySpace pref="333" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -267,6 +267,13 @@
                   </Layout>
                   <SubComponents>
                     <Container class="javax.swing.JPanel" name="jPanel6">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                        </Property>
+                      </Properties>
 
                       <Layout>
                         <DimensionLayout dim="0">
@@ -480,6 +487,13 @@
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="jPanel7">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                        </Property>
+                      </Properties>
 
                       <Layout>
                         <DimensionLayout dim="0">
@@ -526,7 +540,7 @@
                                       <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
                                       <Component id="jTimeChooser2" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="121" max="32767" attributes="0"/>
+                                  <EmptySpace pref="117" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -557,6 +571,13 @@
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="jPanel8">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                        </Property>
+                      </Properties>
 
                       <Layout>
                         <DimensionLayout dim="0">
@@ -576,7 +597,7 @@
                                           <Component id="jButton7" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="230" max="32767" attributes="0"/>
+                                  <EmptySpace pref="226" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -632,6 +653,13 @@
                   </SubComponents>
                 </Container>
                 <Container class="javax.swing.JPanel" name="panel_parking">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                        <LineBorder/>
+                      </Border>
+                    </Property>
+                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                       <JTabbedPaneConstraints tabName="Lost and Found">
@@ -665,7 +693,7 @@
                                       <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                       <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="47" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="41" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -675,6 +703,13 @@
                   </Layout>
                   <SubComponents>
                     <Container class="javax.swing.JPanel" name="jPanel2">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                        </Property>
+                      </Properties>
 
                       <Layout>
                         <DimensionLayout dim="0">
@@ -770,6 +805,13 @@
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="jPanel3">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                        </Property>
+                      </Properties>
 
                       <Layout>
                         <DimensionLayout dim="0">
@@ -854,6 +896,13 @@
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="jPanel4">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                        </Property>
+                      </Properties>
 
                       <Layout>
                         <DimensionLayout dim="0">
@@ -873,7 +922,7 @@
                                           <Component id="jButton10" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="255" max="32767" attributes="0"/>
+                                  <EmptySpace pref="249" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -943,12 +992,12 @@
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Component id="jPanel10" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jPanel5" max="32767" attributes="0"/>
-                                      <Component id="jPanel9" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="jPanel9" alignment="0" max="32767" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="810" max="32767" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="jPanel11" max="32767" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -956,37 +1005,59 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                              <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="18" max="32767" attributes="0"/>
-                              <Component id="jPanel10" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jPanel11" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Component id="jPanel10" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
                     <Container class="javax.swing.JPanel" name="jPanel5">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                        </Property>
+                      </Properties>
 
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jTextField10" max="32767" attributes="0"/>
+                                              <Component id="jTextField11" alignment="0" pref="133" max="32767" attributes="0"/>
+                                              <Component id="jTextField12" max="32767" attributes="0"/>
+                                              <Component id="jTextField13" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
+                                          <Component id="jButton11" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jTextField10" max="32767" attributes="0"/>
-                                      <Component id="jTextField11" alignment="0" pref="133" max="32767" attributes="0"/>
-                                      <Component id="jTextField12" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace pref="80" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1000,17 +1071,24 @@
                                       <Component id="jTextField10" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel30" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jTextField13" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jTextField11" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jLabel32" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jTextField12" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="49" max="32767" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jButton11" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="14" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1030,7 +1108,7 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel31">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="Item"/>
+                            <Property name="text" type="java.lang.String" value="Item Description"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="jTextField11">
@@ -1040,7 +1118,7 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel32">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="jLabel32"/>
+                            <Property name="text" type="java.lang.String" value="lost place"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="jTextField12">
@@ -1048,16 +1126,62 @@
                             <Property name="text" type="java.lang.String" value="jTextField12"/>
                           </Properties>
                         </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel10">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Item ID"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField13">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="jTextField13"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="jButton11">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Add lost item"/>
+                          </Properties>
+                        </Component>
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="jPanel9">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                        </Property>
+                      </Properties>
 
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
-                                  <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
+                                          <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="jLabel34" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel36" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel33" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel35" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="jTextField14" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jTextField16" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jTextField17" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="jTextField15" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="112" max="-2" attributes="0"/>
+                                          <Component id="jButton12" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -1067,7 +1191,29 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="160" max="32767" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jTextField14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel33" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jTextField15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField16" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField17" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jButton12" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="17" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1078,17 +1224,86 @@
                             <Property name="text" type="java.lang.String" value="Found Items"/>
                           </Properties>
                         </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel33">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="UID"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField14">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel34">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Item ID"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField15">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="jTextField13"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel35">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Item Description"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField16">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="jTextField11"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel36">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Found Place"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField17">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="jTextField12"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="jButton12">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="report found item"/>
+                          </Properties>
+                        </Component>
                       </SubComponents>
                     </Container>
                     <Container class="javax.swing.JPanel" name="jPanel10">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                        </Property>
+                      </Properties>
 
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
-                                  <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="148" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jTextField19" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
+                                              <Component id="jTextField18" min="-2" pref="133" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
+                                          <Component id="jButton13" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
+                                          <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace pref="67" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1097,7 +1312,19 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="138" max="32767" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField18" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jTextField19" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                  <Component id="jButton13" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="29" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1106,6 +1333,107 @@
                         <Component class="javax.swing.JLabel" name="jLabel29">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Owner found"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel37">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Item ID"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField18">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="jTextField13"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel38">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Owner UID"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField19">
+                        </Component>
+                        <Component class="javax.swing.JButton" name="jButton13">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="found owner"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="jPanel11">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                        </Property>
+                      </Properties>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="362" max="-2" attributes="0"/>
+                                          <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="316" max="-2" attributes="0"/>
+                                          <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jComboBox3" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jButton14" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace pref="265" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel40" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButton14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="jLabel39">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Lost and Found logs"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel40">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Search By: "/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JComboBox" name="jComboBox3">
+                          <Properties>
+                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                              <StringArray count="3">
+                                <StringItem index="0" value="Lost"/>
+                                <StringItem index="1" value="Found"/>
+                                <StringItem index="2" value="Resolved"/>
+                              </StringArray>
+                            </Property>
+                          </Properties>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="jButton14">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Show"/>
                           </Properties>
                         </Component>
                       </SubComponents>
@@ -1125,16 +1453,342 @@
                     <Property name="useNullLayout" type="boolean" value="false"/>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JLabel" name="jLabel9">
+                    <Container class="javax.swing.JPanel" name="jPanel12">
                       <Properties>
-                        <Property name="text" type="java.lang.String" value="no id panel"/>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                        </Property>
                       </Properties>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="570" y="580" width="-1" height="-1"/>
+                          <AbsoluteConstraints x="10" y="300" width="-1" height="250"/>
                         </Constraint>
                       </Constraints>
-                    </Component>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
+                                          <Component id="jLabel41" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                                  <Component id="jLabel43" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jLabel44" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel45" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                                  <Component id="jTimeChooser3" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <EmptySpace pref="36" max="32767" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="jDateChooser2" alignment="1" max="32767" attributes="0"/>
+                                                      <Component id="jTextField21" alignment="1" pref="237" max="32767" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
+                                  <Component id="jButton15" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel41" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel43" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField21" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="jLabel44" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jDateChooser2" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jTimeChooser3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                                  <Component id="jButton15" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="33" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="jLabel41">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Check Out"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel43">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="NIC Number"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField21">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel44">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Date"/>
+                          </Properties>
+                        </Component>
+                        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser2">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel45">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Time"/>
+                          </Properties>
+                        </Component>
+                        <Component class="lu.tudor.santec.jtimechooser.JTimeChooser" name="jTimeChooser3">
+                          <Properties>
+                            <Property name="name" type="java.lang.String" value="jTime" noResource="true"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="jButton15">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Submit"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="jPanel13">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                        </Property>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="10" y="30" width="-1" height="250"/>
+                        </Constraint>
+                      </Constraints>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="156" max="-2" attributes="0"/>
+                                          <Component id="jLabel42" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                                  <Component id="jLabel46" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="jLabel47" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel48" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                                  <Component id="jTimeChooser4" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <EmptySpace pref="36" max="32767" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                      <Component id="jDateChooser3" alignment="1" max="32767" attributes="0"/>
+                                                      <Component id="jTextField22" alignment="1" pref="237" max="32767" attributes="0"/>
+                                                  </Group>
+                                              </Group>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="128" max="-2" attributes="0"/>
+                                  <Component id="jButton16" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel42" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel46" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField22" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="jLabel47" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jDateChooser3" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jTimeChooser4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel48" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                                  <Component id="jButton16" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace pref="33" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="jLabel42">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Check In"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel46">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="NIC Number"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JTextField" name="jTextField22">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel47">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Date"/>
+                          </Properties>
+                        </Component>
+                        <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser3">
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel48">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Time"/>
+                          </Properties>
+                        </Component>
+                        <Component class="lu.tudor.santec.jtimechooser.JTimeChooser" name="jTimeChooser4">
+                          <Properties>
+                            <Property name="name" type="java.lang.String" value="jTime" noResource="true"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="jButton16">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Submit"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
+                    <Container class="javax.swing.JPanel" name="jPanel14">
+                      <Properties>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                            <LineBorder/>
+                          </Border>
+                        </Property>
+                      </Properties>
+                      <Constraints>
+                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                          <AbsoluteConstraints x="380" y="20" width="760" height="540"/>
+                        </Constraint>
+                      </Constraints>
+
+                      <Layout>
+                        <DimensionLayout dim="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="362" max="-2" attributes="0"/>
+                                          <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="316" max="-2" attributes="0"/>
+                                          <Component id="jLabel50" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jComboBox4" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jButton17" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace pref="225" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                        <DimensionLayout dim="1">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jLabel49" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel50" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBox4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButton17" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                        </DimensionLayout>
+                      </Layout>
+                      <SubComponents>
+                        <Component class="javax.swing.JLabel" name="jLabel49">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Lost and Found logs"/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JLabel" name="jLabel50">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Search By: "/>
+                          </Properties>
+                        </Component>
+                        <Component class="javax.swing.JComboBox" name="jComboBox4">
+                          <Properties>
+                            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                              <StringArray count="3">
+                                <StringItem index="0" value="In Campus"/>
+                                <StringItem index="1" value="Left"/>
+                                <StringItem index="2" value="Chronological"/>
+                              </StringArray>
+                            </Property>
+                          </Properties>
+                          <AuxValues>
+                            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                          </AuxValues>
+                        </Component>
+                        <Component class="javax.swing.JButton" name="jButton17">
+                          <Properties>
+                            <Property name="text" type="java.lang.String" value="Show"/>
+                          </Properties>
+                        </Component>
+                      </SubComponents>
+                    </Container>
                   </SubComponents>
                 </Container>
               </SubComponents>
