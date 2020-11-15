@@ -596,8 +596,8 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                      <JTabbedPaneConstraints tabName="Lost and Found">
-                        <Property name="tabTitle" type="java.lang.String" value="Lost and Found"/>
+                      <JTabbedPaneConstraints tabName="Parking">
+                        <Property name="tabTitle" type="java.lang.String" value="Parking"/>
                       </JTabbedPaneConstraints>
                     </Constraint>
                   </Constraints>
@@ -913,8 +913,8 @@
                 <Container class="javax.swing.JPanel" name="panel_lost">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                      <JTabbedPaneConstraints tabName="Parking">
-                        <Property name="tabTitle" type="java.lang.String" value="Parking"/>
+                      <JTabbedPaneConstraints tabName="Lost and Found">
+                        <Property name="tabTitle" type="java.lang.String" value="Lost and Found"/>
                       </JTabbedPaneConstraints>
                     </Constraint>
                   </Constraints>
