@@ -16,6 +16,9 @@ public class SecurityLogsApp {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Admin ad = new Admin();
+       ad.setVisible(true);
+        
     }
     
 }

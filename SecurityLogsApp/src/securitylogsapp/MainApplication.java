@@ -5,24 +5,26 @@
  */
 package securitylogsapp;
 
-import com.mysql.cj.protocol.Resultset;
-import java.awt.HeadlessException;
+import java.util.Date;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
-import java.sql.Date;
-import java.sql.DriverManager;
-import static java.sql.DriverManager.getConnection;
+ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Timestamp;
+
 import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
+import java.util.Calendar;
+
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 import javax.swing.Timer;
+import javax.swing.table.DefaultTableModel;
+
 
 /**
  *
@@ -30,11 +32,7 @@ import javax.swing.Timer;
  */
 public class MainApplication extends javax.swing.JFrame {
     
-    
-    Connection con = null;
-    PreparedStatement pst = null;
-    ResultSet rs = null;
-
+   
     /**
      * Creates new form MainApplication
      */
@@ -43,9 +41,6 @@ public class MainApplication extends javax.swing.JFrame {
         showDate();
         showTime();
     }
-    
-
-    
     
     void showDate()
     {
@@ -122,32 +117,38 @@ public class MainApplication extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtName = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txtNic = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        txtPurpose = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txtInventory = new javax.swing.JTextArea();
         jLabel12 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        txtPhoneNo = new javax.swing.JTextField();
         jButton6 = new javax.swing.JButton();
         jLabelVisitorCheckInDate = new javax.swing.JLabel();
         jLabelVisitorCheckInTime = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        txtCheckOutNIC = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
         jLabelVisitorCheckOutTime = new javax.swing.JLabel();
+        Submit = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
         jButton7 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jVisitorsTable1 = new javax.swing.JTable();
+        jButtonArrived = new javax.swing.JButton();
+        jButtonDeparted = new javax.swing.JButton();
+        jButtonChronological = new javax.swing.JButton();
+        jButtonClear = new javax.swing.JButton();
         panel_parking = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
@@ -168,39 +169,53 @@ public class MainApplication extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBox2 = new javax.swing.JComboBox<String>();
         jButton10 = new javax.swing.JButton();
         panel_lost = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
-        lfuid = new javax.swing.JTextField();
+        txtLUid = new javax.swing.JTextField();
         jLabel31 = new javax.swing.JLabel();
-        lfidsc = new javax.swing.JTextField();
+        txtLItemDes = new javax.swing.JTextField();
         jLabel32 = new javax.swing.JLabel();
-        lfplace = new javax.swing.JTextField();
+        txtLostPlace = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        lfiid = new javax.swing.JTextField();
+        txtLItemId = new javax.swing.JTextField();
         jButton11 = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        lfdate = new com.toedter.calendar.JDateChooser();
-        lftime = new lu.tudor.santec.jtimechooser.JTimeChooser();
+        jlostdate = new com.toedter.calendar.JDateChooser();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        txtfuid = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        txtfitemid = new javax.swing.JTextField();
+        jLabel35 = new javax.swing.JLabel();
+        txtfitemdes = new javax.swing.JTextField();
+        jLabel36 = new javax.swing.JLabel();
+        txtfplace = new javax.swing.JTextField();
         jButton12 = new javax.swing.JButton();
+        jLabel52 = new javax.swing.JLabel();
+        jfounddate = new com.toedter.calendar.JDateChooser();
         jPanel10 = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
-        lffiid = new javax.swing.JTextField();
+        txtowitemid = new javax.swing.JTextField();
         jLabel38 = new javax.swing.JLabel();
-        lffouid = new javax.swing.JTextField();
+        txtownerid = new javax.swing.JTextField();
         jButton13 = new javax.swing.JButton();
+        jowndate = new com.toedter.calendar.JDateChooser();
+        jLabel53 = new javax.swing.JLabel();
         jPanel11 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
-        jButton14 = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        lftable = new javax.swing.JTable();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
+        jLabel40 = new javax.swing.JLabel();
+        jButtonlost = new javax.swing.JButton();
+        jButtonfound = new javax.swing.JButton();
+        jButtonResolved = new javax.swing.JButton();
+        jButtonclear = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jLostnFoundTable1 = new javax.swing.JTable();
         panel_noid = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
         jLabel41 = new javax.swing.JLabel();
@@ -223,7 +238,7 @@ public class MainApplication extends javax.swing.JFrame {
         jPanel14 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
         jLabel50 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        jComboBox4 = new javax.swing.JComboBox<String>();
         jButton17 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -300,7 +315,7 @@ public class MainApplication extends javax.swing.JFrame {
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(334, Short.MAX_VALUE))
+                .addContainerGap(361, Short.MAX_VALUE))
         );
 
         jButton1.getAccessibleContext().setAccessibleName("jButtonVisitors");
@@ -329,13 +344,18 @@ public class MainApplication extends javax.swing.JFrame {
 
         jLabel8.setText("Inventory");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txtInventory.setColumns(20);
+        txtInventory.setRows(5);
+        jScrollPane1.setViewportView(txtInventory);
 
         jLabel12.setText("Phone No");
 
         jButton6.setText("Submit");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -359,18 +379,19 @@ public class MainApplication extends javax.swing.JFrame {
                         .addGap(36, 36, 36)
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtName, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txtNic, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jScrollPane1)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addGap(34, 34, 34)
-                                .addComponent(jButton6))
+                                .addComponent(txtPurpose, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtPhoneNo, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jLabelVisitorCheckInTime, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
                                 .addComponent(jLabelVisitorCheckInDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton6)
+                .addGap(141, 141, 141))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -379,11 +400,11 @@ public class MainApplication extends javax.swing.JFrame {
                 .addComponent(jLabel7)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
                 .addGap(10, 10, 10)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -395,7 +416,7 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(jLabelVisitorCheckInTime, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(9, 9, 9)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPurpose, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
@@ -406,24 +427,24 @@ public class MainApplication extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPhoneNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addComponent(jButton6)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jLabel2.getAccessibleContext().setAccessibleName("jLabelName");
-        jTextField1.getAccessibleContext().setAccessibleName("txtName");
+        txtName.getAccessibleContext().setAccessibleName("txtName");
         jLabel3.getAccessibleContext().setAccessibleName("jLabelNicNo");
-        jTextField2.getAccessibleContext().setAccessibleName("txtNic");
+        txtNic.getAccessibleContext().setAccessibleName("txtNic");
         jLabel4.getAccessibleContext().setAccessibleName("jLabelDate");
         jLabel5.getAccessibleContext().setAccessibleName("jLabelTime");
         jLabel6.getAccessibleContext().setAccessibleName("jLabelPurpose");
-        jTextField3.getAccessibleContext().setAccessibleName("txtPurpose");
+        txtPurpose.getAccessibleContext().setAccessibleName("txtPurpose");
         jLabel8.getAccessibleContext().setAccessibleName("jLabelInventory");
         jLabel12.getAccessibleContext().setAccessibleName("jLabelPhoneNo");
-        jTextField5.getAccessibleContext().setAccessibleName("txtPhoneNo");
+        txtPhoneNo.getAccessibleContext().setAccessibleName("txtPhoneNo");
         jButton6.getAccessibleContext().setAccessibleName("JButtonSubmit");
 
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -433,6 +454,13 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel14.setText("NIC Number");
 
         jLabel15.setText("Time");
+
+        Submit.setText("Submit");
+        Submit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SubmitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -451,11 +479,15 @@ public class MainApplication extends javax.swing.JFrame {
                             .addComponent(jLabel15))
                         .addGap(33, 33, 33)
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField6)
+                            .addComponent(txtCheckOutNIC)
                             .addGroup(jPanel7Layout.createSequentialGroup()
                                 .addComponent(jLabelVisitorCheckOutTime, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Submit, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(134, 134, 134))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -465,12 +497,14 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCheckOutNIC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel15)
                     .addComponent(jLabelVisitorCheckOutTime, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Submit)
+                .addContainerGap(95, Short.MAX_VALUE))
         );
 
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -479,9 +513,50 @@ public class MainApplication extends javax.swing.JFrame {
 
         jLabel17.setText("Search by :");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All Entries", "Chronological", "Arrived", "Departed" }));
+        jButton7.setText("All Entries");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
 
-        jButton7.setText("Search");
+        jVisitorsTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Name", "NIC", "Date", "Time", "Purpose", "Inventory", "PhoneNo", "CheckOutTime"
+            }
+        ));
+        jScrollPane2.setViewportView(jVisitorsTable1);
+
+        jButtonArrived.setText("Arrived");
+        jButtonArrived.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonArrivedActionPerformed(evt);
+            }
+        });
+
+        jButtonDeparted.setText("Departed");
+        jButtonDeparted.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDepartedActionPerformed(evt);
+            }
+        });
+
+        jButtonChronological.setText("Chronological");
+        jButtonChronological.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonChronologicalActionPerformed(evt);
+            }
+        });
+
+        jButtonClear.setText("Clear");
+        jButtonClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonClearActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -493,25 +568,39 @@ public class MainApplication extends javax.swing.JFrame {
                         .addGap(352, 352, 352)
                         .addComponent(jLabel16))
                     .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(298, 298, 298)
+                        .addGap(83, 83, 83)
                         .addComponent(jLabel17)
+                        .addGap(28, 28, 28)
+                        .addComponent(jButton7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton7)))
-                .addContainerGap(195, Short.MAX_VALUE))
+                        .addComponent(jButtonArrived)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonDeparted)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonChronological)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonClear))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(54, 54, 54)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 764, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(61, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel16)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(16, 16, 16)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonArrived)
                     .addComponent(jLabel17)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton7))
-                .addContainerGap(545, Short.MAX_VALUE))
+                    .addComponent(jButton7)
+                    .addComponent(jButtonDeparted)
+                    .addComponent(jButtonChronological)
+                    .addComponent(jButtonClear))
+                .addGap(37, 37, 37)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panel_visitLayout = new javax.swing.GroupLayout(panel_visit);
@@ -662,7 +751,7 @@ public class MainApplication extends javax.swing.JFrame {
 
         jLabel27.setText("Search By: ");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Parked", "Took off", "by spot number" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Parked", "Took off", "by spot number" }));
 
         jButton10.setText("Show");
 
@@ -682,7 +771,7 @@ public class MainApplication extends javax.swing.JFrame {
                         .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton10)))
-                .addContainerGap(249, Short.MAX_VALUE))
+                .addContainerGap(327, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -734,15 +823,9 @@ public class MainApplication extends javax.swing.JFrame {
 
         jLabel31.setText("Item Description");
 
-        lfidsc.setText("jTextField11");
-
         jLabel32.setText("lost place");
 
-        lfplace.setText("jTextField12");
-
         jLabel10.setText("Item ID");
-
-        lfiid.setText("jTextField13");
 
         jButton11.setText("Add lost item");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
@@ -753,81 +836,142 @@ public class MainApplication extends javax.swing.JFrame {
 
         jLabel9.setText("Lost Date");
 
-        jLabel51.setText("Lost Time");
-
-        jButton12.setText("report found item");
-
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel32)
+                    .addComponent(jLabel30)
+                    .addComponent(jLabel31))
+                .addGap(33, 33, 33)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel11)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel32)
-                            .addComponent(jLabel30)
-                            .addComponent(jLabel31))
-                        .addGap(33, 33, 33)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel11)
-                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(lfuid)
-                                .addComponent(lfidsc, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
-                                .addComponent(lfplace)
-                                .addComponent(lfiid))))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton11)
                             .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jLabel9)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtLUid)
+                                    .addComponent(txtLItemDes, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
+                                    .addComponent(txtLostPlace)
+                                    .addComponent(txtLItemId))
                                 .addGap(18, 18, 18)
-                                .addComponent(lfdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jLabel51)
-                                .addGap(18, 18, 18)
-                                .addComponent(lftime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jButton11)
-                                .addGap(28, 28, 28)
-                                .addComponent(jButton12)))))
-                .addContainerGap(31, Short.MAX_VALUE))
+                                .addComponent(jLabel9)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jlostdate, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addComponent(jLabel11)
                 .addGap(7, 7, 7)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lfuid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel30))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtLUid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel30)
+                        .addComponent(jLabel9))
+                    .addComponent(jlostdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lfiid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtLItemId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10))
-                .addGap(12, 12, 12)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lfidsc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel31))
+                .addGap(16, 16, 16)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel31)
+                    .addComponent(txtLItemDes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel32)
-                    .addComponent(lfplace, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel9)
-                    .addComponent(lfdate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtLostPlace, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel28.setText("Found Items");
+
+        jLabel33.setText("UID");
+
+        jLabel34.setText("Item ID");
+
+        jLabel35.setText("Item Description");
+
+        jLabel36.setText("Found Place");
+
+        jButton12.setText("report found item");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
+
+        jLabel52.setText("Found Date");
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton12)
+                .addGap(183, 183, 183))
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel34)
+                    .addComponent(jLabel36)
+                    .addComponent(jLabel33)
+                    .addComponent(jLabel35))
+                .addGap(33, 33, 33)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel28)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtfuid)
+                            .addComponent(txtfitemdes)
+                            .addComponent(txtfplace)
+                            .addComponent(txtfitemid, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
+                        .addComponent(jLabel52)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jfounddate, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(21, 21, 21))))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addComponent(jLabel28)
+                .addGap(7, 7, 7)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(txtfuid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel33)
+                        .addComponent(jLabel52))
+                    .addComponent(jfounddate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lftime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel51))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton12)
-                    .addComponent(jButton11))
-                .addGap(35, 35, 35))
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtfitemid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel34))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel35)
+                    .addComponent(txtfitemdes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel36)
+                    .addComponent(txtfplace, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton12)
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
         jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -836,92 +980,105 @@ public class MainApplication extends javax.swing.JFrame {
 
         jLabel37.setText("Item ID");
 
-        lffiid.setText("jTextField13");
-
         jLabel38.setText("Owner UID");
 
-        jButton13.setText("found owner");
+        jButton13.setText("Found owner");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton13ActionPerformed(evt);
             }
         });
 
+        jLabel53.setText("Own Date");
+
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton13)
+                .addGap(204, 204, 204))
             .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGap(49, 49, 49)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel37)
+                    .addComponent(jLabel38))
+                .addGap(33, 33, 33)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel29)
+                    .addComponent(txtownerid, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel37)
-                            .addComponent(jLabel38))
-                        .addGap(33, 33, 33)
-                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel29)
-                            .addComponent(lffouid, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lffiid, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel10Layout.createSequentialGroup()
-                        .addGap(103, 103, 103)
-                        .addComponent(jButton13)))
+                        .addComponent(txtowitemid, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel53)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jowndate, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addComponent(jLabel29)
-                .addGap(24, 24, 24)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel37)
-                    .addComponent(lffiid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jowndate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel37)
+                        .addComponent(txtowitemid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel53)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lffouid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtownerid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel38))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton13)
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel39.setText("Lost and Found logs");
 
-        jButton14.setText("Lost");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        jLabel40.setText("Search By: ");
+
+        jButtonlost.setText("Lost");
+        jButtonlost.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                jButtonlostActionPerformed(evt);
             }
         });
 
-        lftable.setModel(new javax.swing.table.DefaultTableModel(
+        jButtonfound.setText("Found");
+        jButtonfound.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonfoundActionPerformed(evt);
+            }
+        });
+
+        jButtonResolved.setText("Resolved");
+        jButtonResolved.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonResolvedActionPerformed(evt);
+            }
+        });
+
+        jButtonclear.setText("Clear");
+        jButtonclear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonclearActionPerformed(evt);
+            }
+        });
+
+        jLostnFoundTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null}
+
             },
             new String [] {
-                "University ID", "Item ID", "Item Description", "Place", "Date", "Time", "Status"
+                "UID", "ItemID", "ItemDescription", "LostPlace", "LostDate", "FoundPlace", "FoundDate", "OwnerID", "OwnDate"
             }
         ));
-        jScrollPane2.setViewportView(lftable);
-
-        jButton18.setText("Found by Other");
-        jButton18.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
-            }
-        });
-
-        jButton19.setText("Resolved");
-        jButton19.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton19ActionPerformed(evt);
-            }
-        });
+        jScrollPane3.setViewportView(jLostnFoundTable1);
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -930,20 +1087,24 @@ public class MainApplication extends javax.swing.JFrame {
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGap(267, 267, 267)
-                        .addComponent(jLabel39))
-                    .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGap(231, 231, 231)
-                        .addComponent(jButton14)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton18)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton19)))
-                .addContainerGap(270, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 731, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addGap(267, 267, 267)
+                                .addComponent(jLabel39))
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addGap(160, 160, 160)
+                                .addComponent(jLabel40)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButtonlost)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButtonfound)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButtonResolved)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButtonclear)))
+                        .addGap(0, 165, Short.MAX_VALUE))
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -952,12 +1113,14 @@ public class MainApplication extends javax.swing.JFrame {
                 .addComponent(jLabel39)
                 .addGap(20, 20, 20)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton14)
-                    .addComponent(jButton18)
-                    .addComponent(jButton19))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 260, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(162, 162, 162))
+                    .addComponent(jButtonlost)
+                    .addComponent(jLabel40)
+                    .addComponent(jButtonResolved)
+                    .addComponent(jButtonfound)
+                    .addComponent(jButtonclear))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20))
         );
 
         javax.swing.GroupLayout panel_lostLayout = new javax.swing.GroupLayout(panel_lost);
@@ -966,10 +1129,11 @@ public class MainApplication extends javax.swing.JFrame {
             panel_lostLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_lostLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panel_lostLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panel_lostLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -978,12 +1142,14 @@ public class MainApplication extends javax.swing.JFrame {
             .addGroup(panel_lostLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(panel_lostLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(panel_lostLayout.createSequentialGroup()
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
+                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Lost and Found", panel_lost);
@@ -1132,7 +1298,7 @@ public class MainApplication extends javax.swing.JFrame {
 
         jLabel50.setText("Search By: ");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "In Campus", "Left", "Chronological" }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "In Campus", "Left", "Chronological" }));
 
         jButton17.setText("Show");
 
@@ -1171,7 +1337,7 @@ public class MainApplication extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("No ID Issued", panel_noid);
 
-        jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1160, 660));
+        jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1280, 660));
         jTabbedPane1.getAccessibleContext().setAccessibleName("tab1");
 
         panel_base.add(jPanel1, java.awt.BorderLayout.CENTER);
@@ -1180,7 +1346,7 @@ public class MainApplication extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panel_base, javax.swing.GroupLayout.DEFAULT_SIZE, 1309, Short.MAX_VALUE)
+            .addComponent(panel_base, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1215,80 +1381,536 @@ public class MainApplication extends javax.swing.JFrame {
         jTabbedPane1.setSelectedIndex(4);
     }//GEN-LAST:event_jButton5ActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         
-        try{
-            String sql;
-            sql = "INSERT INTO lost" + "(id, itemid, itemdsc, place, date, time, status)" + "VALUES (?,?,?,?,?,?,?)";
-            con DriverManager.getConnection("jdbc:mysql://localhost/SecManage","root","");
-            pst = con.prepareStatement(sql);
-            pst.setString(1, lfuid.getText());
-            pst.setString(2, lfiid.getText());
-            pst.setString(3, lfidsc.getText());
-            pst.setString(4, lfplace.getText());
-            //pst.setString(5, lfdate.getText());
-            //pst.setString(6, lftime.getText());
-            pst.setString(7, "lost");
+         try {
+            Class.forName("com.mysql.jdbc.Driver");
             
-            JOptionPane.showMessageDialog(null,"Added Lost Item");
+
+            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+
+            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            
+          
+           Date date = new Date();
+           java.sql.Date sqldate= new java.sql.Date(date.getTime());
+            
+            
+            String sql = "Insert into visitors(Name,NIC,Date,Time,Purpose,Inventory,PhoneNo) Values(?,?,?,?,?,?,?)";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, txtName.getText());
+            pst.setString(2, txtNic.getText());
+            pst.setDate(3, sqldate);
+            pst.setTimestamp(4, new Timestamp(System.currentTimeMillis()));
+           
+            pst.setString(5, txtPurpose.getText());
+            pst.setString(6, txtInventory.getText());
+            pst.setString(7, txtPhoneNo.getText());
                
+            
+            pst.executeUpdate();
+               JOptionPane.showMessageDialog(null, "Record Inserted Successfully");
+               txtName.setText("");
+               txtNic.setText("");
+               txtPurpose.setText("");
+               txtInventory.setText("");
+               txtPhoneNo.setText("");
+               
+               
+               
+               con.close();
+        
         }
-        catch(HeadlessException | SQLException ex){
-            JOptionPane.showMessageDialog(null,ex);
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+        
+            
+            
+        
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitActionPerformed
+        // TODO add your handling code here:
+        
+        
+         try {
+            Class.forName("com.mysql.jdbc.Driver");
+            
+
+            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+
+            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            
+            
+            
+            String sql = "UPDATE visitors SET CheckOutTime=? WHERE NIC=?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setTimestamp(1, new Timestamp(System.currentTimeMillis()));
+            pst.setString(2, txtCheckOutNIC.getText());
+               
+            
+            pst.executeUpdate();
+               JOptionPane.showMessageDialog(null, "Record Inserted Successfully");
+               txtCheckOutNIC.setText("");
+               
+               
+               con.close();
         }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+        
+        
+        
+    }//GEN-LAST:event_SubmitActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        // TODO add your handling code here:
+        
+         try {
+            Class.forName("com.mysql.jdbc.Driver");
+            
+
+            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+
+            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            
+            
+            
+            
+            Statement st = con.createStatement();
+            String sql = "Select * from visitors";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                String name = rs.getString("Name");
+                String nic  = rs.getString("NIC");
+                String date = rs.getString("Date");
+                String time = rs.getString("Time");
+                String purpose = rs.getString("Purpose");
+                String inv = rs.getString("Inventory");
+                String phono = rs.getString("PhoneNo");
+                String outtime = rs.getString("CheckOutTime");
+                
+                String tbData[]=  {name,nic,date,time,purpose,inv,phono,outtime};
+                DefaultTableModel tblModel = (DefaultTableModel)jVisitorsTable1.getModel();
+                
+                tblModel.addRow(tbData);
+            }
+               
+               con.close();
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+        
+        
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButtonChronologicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonChronologicalActionPerformed
+        // TODO add your handling code here:
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            
+
+            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+
+            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            
+            
+            
+            
+            Statement st = con.createStatement();
+            String sql = "Select * from visitors ORDER BY Time DESC";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                String name = rs.getString("Name");
+                String nic  = rs.getString("NIC");
+                String date = rs.getString("Date");
+                String time = rs.getString("Time");
+                String purpose = rs.getString("Purpose");
+                String inv = rs.getString("Inventory");
+                String phono = rs.getString("PhoneNo");
+                String outtime = rs.getString("CheckOutTime");
+                
+                String tbData[]=  {name,nic,date,time,purpose,inv,phono,outtime};
+                DefaultTableModel tblModel = (DefaultTableModel)jVisitorsTable1.getModel();
+                
+                tblModel.addRow(tbData);
+            }
+               
+               con.close();
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+        
+    }//GEN-LAST:event_jButtonChronologicalActionPerformed
+
+    private void jButtonArrivedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonArrivedActionPerformed
+        // TODO add your handling code here:
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            
+
+            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+
+            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            
+            
+            
+            
+            Statement st = con.createStatement();
+            String sql = "Select Name,NIC,Date,Time,Purpose,Inventory,PhoneNo from visitors where CheckOutTime IS Null";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                String name = rs.getString("Name");
+                String nic  = rs.getString("NIC");
+                String date = rs.getString("Date");
+                String time = rs.getString("Time");
+                String purpose = rs.getString("Purpose");
+                String inv = rs.getString("Inventory");
+                String phono = rs.getString("PhoneNo");
+                
+                
+                String tbData[]=  {name,nic,date,time,purpose,inv,phono};
+                DefaultTableModel tblModel = (DefaultTableModel)jVisitorsTable1.getModel();
+                
+                tblModel.addRow(tbData);
+            }
+               
+               con.close();
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+    }//GEN-LAST:event_jButtonArrivedActionPerformed
+
+    private void jButtonDepartedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDepartedActionPerformed
+        // TODO add your handling code here:
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            
+
+            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+
+            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            
+            
+            
+            
+            Statement st = con.createStatement();
+            String sql = "Select * from visitors where CheckOutTime IS NOT Null";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                String name = rs.getString("Name");
+                String nic  = rs.getString("NIC");
+                String date = rs.getString("Date");
+                String time = rs.getString("Time");
+                String purpose = rs.getString("Purpose");
+                String inv = rs.getString("Inventory");
+                String phono = rs.getString("PhoneNo");
+                String outtime = rs.getString("CheckOutTime");
+                
+                
+                String tbData[]=  {name,nic,date,time,purpose,inv,phono,outtime};
+                DefaultTableModel tblModel = (DefaultTableModel)jVisitorsTable1.getModel();
+                
+                tblModel.addRow(tbData);
+            }
+               
+               con.close();
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+    }//GEN-LAST:event_jButtonDepartedActionPerformed
+
+    private void jButtonClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClearActionPerformed
+        // TODO add your handling code here:
+        jVisitorsTable1.setModel(new DefaultTableModel(null,new String[]{"Name","NIC","Date","Time","Purpose","Inventory","PhoneNo","CheckOutTime"}));
+    }//GEN-LAST:event_jButtonClearActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+        
+         try {
+            Class.forName("com.mysql.jdbc.Driver");
+            
+
+            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+
+            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            
+            Date deparDateD=(Date) jlostdate.getDate();
+            SimpleDateFormat oDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            String departDate= oDateFormat.format(deparDateD);
+            
+            
+            String sql = "Insert into lost(id,itemid,itemdsc,place,date) Values (?,?,?,?,?)";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, txtLUid.getText());
+            pst.setString(2, txtLItemId.getText());
+            pst.setString(3, txtLItemDes.getText());
+            pst.setString(4, txtLostPlace.getText()); 
+            pst.setString(5, departDate);
+            
+            
+               
+            
+            pst.executeUpdate();
+               JOptionPane.showMessageDialog(null, "Record Inserted Successfully");
+               txtLUid.setText("");
+               txtLItemId.setText("");
+               txtLItemDes.setText("");
+               txtLostPlace.setText("");
+               
+               
+               
+               
+               con.close();
+        
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+        
+        
+        
         
     }//GEN-LAST:event_jButton11ActionPerformed
 
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        try{
-            String sql;
-            sql = "UPDATE lost SET status='resolved' owner="lffouid.getText()" WHERE itemid = "lffiid.getText()"";
-            con DriverManager.getConnection("jdbc:mysql://localhost/SecManage","root","");
-            pst = con.prepareStatement(sql);
-
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        // TODO add your handling code here:
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
             
-            JOptionPane.showMessageDialog(null,"Item Resolved");
+
+            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+
+            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            
+            Date deparDateD=(Date) jfounddate.getDate();
+            SimpleDateFormat oDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            String departDate= oDateFormat.format(deparDateD);
+            
+            
+            String sql = "Insert into found(id,itemid,itemdsc,foundplace,founddate) Values (?,?,?,?,?)";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, txtfuid.getText());
+            pst.setString(2, txtfitemid.getText());
+            pst.setString(3, txtfitemdes.getText());
+            pst.setString(4, txtfplace.getText()); 
+            pst.setString(5, departDate);
+            
+            
                
+            
+            pst.executeUpdate();
+               JOptionPane.showMessageDialog(null, "Record Inserted Successfully");
+               txtfuid.setText("");
+               txtfitemid.setText("");
+               txtfitemdes.setText("");
+               txtfplace.setText("");
+               
+               
+               
+               
+               con.close();
+        
         }
-        catch(HeadlessException | SQLException ex){
-            JOptionPane.showMessageDialog(null,ex);
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+        
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            
+
+            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+
+            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            
+            Date deparDateD=(Date) jowndate.getDate();
+            SimpleDateFormat oDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            String departDate= oDateFormat.format(deparDateD);
+            
+            
+            String sql = "Insert into itemowner(itemid,ownerid,owndate) Values (?,?,?)";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, txtowitemid.getText());
+            pst.setString(2, txtownerid.getText());
+            pst.setString(3, departDate);
+            
+            
+               
+            
+            pst.executeUpdate();
+               JOptionPane.showMessageDialog(null, "Record Inserted Successfully");
+               txtowitemid.setText("");
+               txtownerid.setText("");
+              
+               
+               
+               
+               
+               con.close();
+        
         }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
         
     }//GEN-LAST:event_jButton13ActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        showTableData("SELECT * FROM lost WHERE status = 'lost'");
-    }//GEN-LAST:event_jButton14ActionPerformed
+    private void jButtonlostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonlostActionPerformed
+        // TODO add your handling code here:
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            
 
-    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
-        showTableData("SELECT * FROM lost WHERE status = 'found'");
-    }//GEN-LAST:event_jButton18ActionPerformed
+            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
 
-    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
-        showTableData("SELECT * FROM lost WHERE status = 'resolved'");
-    }//GEN-LAST:event_jButton19ActionPerformed
+            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            
+            
+            
+            
+            Statement st = con.createStatement();
+            String sql = "Select * from lost";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                String id = rs.getString("id");
+                String itemid  = rs.getString("itemid");
+                String itemdsc = rs.getString("itemdsc");
+                String place = rs.getString("place");
+                String date = rs.getString("date");
+             
+                
+                String tbData[]=  {id,itemid,itemdsc,place,date};
+                DefaultTableModel tblModel = (DefaultTableModel)jLostnFoundTable1.getModel();
+                
+                tblModel.addRow(tbData);
+            }
+               
+               con.close();
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+    }//GEN-LAST:event_jButtonlostActionPerformed
 
-    public void showTableData(String q){
-    try{
-        con = DriverManager.getConnection("jdbc:mysql://localhost/lost","root","");
-        String sql = q;
-        pst = con.prepareStatement(sql);
-        rs=pst.executeQuery();
-        lftable.setModel(DbUtils.resultSetToTableModel(rs));
-    }
-    catch(Exception ex){
-    JOptionPane.showMessageDialog(null, ex);
+    private void jButtonclearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonclearActionPerformed
+        // TODO add your handling code here:
+        
+        jLostnFoundTable1.setModel(new DefaultTableModel(null,new String[]{"UID","ItemID","ItemDescription","LostPlace","LostDate","FoundPlace","FoundDate","OwnerID","OwnerDate"}));
+    }//GEN-LAST:event_jButtonclearActionPerformed
 
-    }
+    private void jButtonfoundActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonfoundActionPerformed
+        // TODO add your handling code here:
+         try {
+            Class.forName("com.mysql.jdbc.Driver");
+            
 
-    }
-    
-    
-    
-    
-    
-    
-    
+            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+
+            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            
+            
+            
+            
+            Statement st = con.createStatement();
+            String sql = "Select l.id,l.itemid,l.itemdsc,l.place,l.date,f.foundplace,f.founddate FROM lost l,found f WHERE l.itemid=f.itemid;";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                String id = rs.getString("id");
+                String itemid  = rs.getString("itemid");
+                String itemdsc = rs.getString("itemdsc");
+                String place = rs.getString("place");
+                String date = rs.getString("date");
+                String fplace = rs.getString("foundplace");
+                String fdate = rs.getString("founddate");
+             
+                
+                String tbData[]=  {id,itemid,itemdsc,place,date,fplace,fdate};
+                DefaultTableModel tblModel = (DefaultTableModel)jLostnFoundTable1.getModel();
+                
+                tblModel.addRow(tbData);
+            }
+               
+               con.close();
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+    }//GEN-LAST:event_jButtonfoundActionPerformed
+
+    private void jButtonResolvedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResolvedActionPerformed
+        // TODO add your handling code here:
+           try {
+            Class.forName("com.mysql.jdbc.Driver");
+            
+
+            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+
+            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            
+            
+            
+            
+            Statement st = con.createStatement();
+            String sql = "Select lost.*,found.*,itemowner.* from lost,found,itemowner";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                String id = rs.getString("id");
+                String itemid  = rs.getString("itemid");
+                String itemdsc = rs.getString("itemdsc");
+                String lplace = rs.getString("place");
+                String ldate = rs.getString("date");
+                
+                String fplace = rs.getString("foundplace");
+                String fdate = rs.getString("founddate");
+                String ownerid=rs.getString("ownerid");
+                String owndate=rs.getString("owndate");
+                
+             
+                
+                String tbData[]=  {id,itemid,itemdsc,lplace,ldate,fplace,fdate,ownerid,owndate};
+                DefaultTableModel tblModel = (DefaultTableModel)jLostnFoundTable1.getModel();
+                
+                tblModel.addRow(tbData);
+            }
+               
+               con.close();
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+    }//GEN-LAST:event_jButtonResolvedActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1325,6 +1947,7 @@ public class MainApplication extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Submit;
     private org.joda.time.DateMidnight dateMidnight1;
     private org.joda.time.DateTime dateTime1;
     private org.joda.time.DateTime dateTime2;
@@ -1337,12 +1960,9 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1351,7 +1971,14 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JButton jButtonArrived;
+    private javax.swing.JButton jButtonChronological;
+    private javax.swing.JButton jButtonClear;
+    private javax.swing.JButton jButtonDeparted;
+    private javax.swing.JButton jButtonResolved;
+    private javax.swing.JButton jButtonclear;
+    private javax.swing.JButton jButtonfound;
+    private javax.swing.JButton jButtonlost;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
@@ -1374,15 +2001,21 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
@@ -1394,7 +2027,8 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -1406,6 +2040,7 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelVisitorCheckInDate;
     private javax.swing.JLabel jLabelVisitorCheckInTime;
     private javax.swing.JLabel jLabelVisitorCheckOutTime;
+    private javax.swing.JTable jLostnFoundTable1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -1419,33 +2054,24 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField21;
     private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
     private lu.tudor.santec.jtimechooser.demo.JTimeChooserDemo jTimeChooserDemo1;
     private lu.tudor.santec.jtimechooser.demo.JTimeChooserDemo jTimeChooserDemo2;
     private lu.tudor.santec.jtimechooser.demo.JTimeChooserDemo jTimeChooserDemo3;
-    private com.toedter.calendar.JDateChooser lfdate;
-    private javax.swing.JTextField lffiid;
-    private javax.swing.JTextField lffouid;
-    private javax.swing.JTextField lfidsc;
-    private javax.swing.JTextField lfiid;
-    private javax.swing.JTextField lfplace;
-    private javax.swing.JTable lftable;
-    private lu.tudor.santec.jtimechooser.JTimeChooser lftime;
-    private javax.swing.JTextField lfuid;
+    private javax.swing.JTable jVisitorsTable1;
+    private com.toedter.calendar.JDateChooser jfounddate;
+    private com.toedter.calendar.JDateChooser jlostdate;
+    private com.toedter.calendar.JDateChooser jowndate;
     private org.joda.time.LocalDate localDate1;
     private org.joda.time.LocalDateTime localDateTime1;
     private org.joda.time.LocalTime localTime1;
@@ -1464,7 +2090,21 @@ public class MainApplication extends javax.swing.JFrame {
     private org.joda.time.Period period1;
     private org.joda.time.format.PeriodFormatterBuilder periodFormatterBuilder1;
     private org.joda.time.format.PeriodFormatterBuilder periodFormatterBuilder2;
+    private javax.swing.JTextField txtCheckOutNIC;
+    private javax.swing.JTextArea txtInventory;
+    private javax.swing.JTextField txtLItemDes;
+    private javax.swing.JTextField txtLItemId;
+    private javax.swing.JTextField txtLUid;
+    private javax.swing.JTextField txtLostPlace;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JTextField txtNic;
+    private javax.swing.JTextField txtPhoneNo;
+    private javax.swing.JTextField txtPurpose;
+    private javax.swing.JTextField txtfitemdes;
+    private javax.swing.JTextField txtfitemid;
+    private javax.swing.JTextField txtfplace;
+    private javax.swing.JTextField txtfuid;
+    private javax.swing.JTextField txtowitemid;
+    private javax.swing.JTextField txtownerid;
     // End of variables declaration//GEN-END:variables
-
-
 }

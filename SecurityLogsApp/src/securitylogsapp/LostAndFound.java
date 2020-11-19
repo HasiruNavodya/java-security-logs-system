@@ -3,11 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package securitylogsapp;
 
 /**
  *
- * @author HNMP
+ * @author PC
  */
 public class LostAndFound {
     
@@ -30,5 +31,5 @@ public class LostAndFound {
         this.status = status;
         
     }
-        
+    
 }
