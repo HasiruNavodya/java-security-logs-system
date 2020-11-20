@@ -65,24 +65,27 @@ public class Admin extends javax.swing.JFrame {
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 55, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("DialogInput", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Lucida Console", 1, 24)); // NOI18N
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/businessman.png"))); // NOI18N
         jLabel2.setText("Admin Login");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/name.png"))); // NOI18N
-        jLabel3.setText("Name");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(313, 230, -1, 33));
+        jLabel3.setText("Name:");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, -1, 33));
 
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 14)); // NOI18N
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/key.png"))); // NOI18N
-        jLabel4.setText("Password");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(288, 309, -1, -1));
+        jLabel4.setText("Password:");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, -1, -1));
         jPanel2.add(txtAdminPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 302, 188, 31));
         txtAdminPassword.getAccessibleContext().setAccessibleName("txtAdminPassword");
 
         jPanel2.add(txtAdminName, new org.netbeans.lib.awtextra.AbsoluteConstraints(384, 230, 188, 33));
         txtAdminName.getAccessibleContext().setAccessibleName("");
 
+        jButton1.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/login.png"))); // NOI18N
         jButton1.setText("Login");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -93,6 +96,7 @@ public class Admin extends javax.swing.JFrame {
         jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(308, 369, 108, -1));
         jButton1.getAccessibleContext().setAccessibleName("jButtonLogin");
 
+        jButtonCancel.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
         jButtonCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/x-button.png"))); // NOI18N
         jButtonCancel.setText("Cancel");
         jButtonCancel.addActionListener(new java.awt.event.ActionListener() {
@@ -102,6 +106,7 @@ public class Admin extends javax.swing.JFrame {
         });
         jPanel2.add(jButtonCancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(546, 369, 102, -1));
 
+        jButtonReset.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
         jButtonReset.setIcon(new javax.swing.ImageIcon(getClass().getResource("/reset.png"))); // NOI18N
         jButtonReset.setText("Reset");
         jButtonReset.addActionListener(new java.awt.event.ActionListener() {
