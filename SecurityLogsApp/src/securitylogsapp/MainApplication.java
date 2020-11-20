@@ -53,7 +53,11 @@ public class MainApplication extends javax.swing.JFrame {
                //No Id Issued CheckIn, CheckOut Date
                jLabelIdIssuedCheckInDate.setText(dtf.format(now));
                jLabelIdIssuedCheckOutDate.setText(dtf.format(now));
-        
+               
+               
+               //Parking CheckIn,Out Date
+               txtPcheckInDate.setText(dtf.format(now));
+               jLabelParkingCheckOutDate.setText(dtf.format(now));
     }
     
       void showTime()
@@ -68,6 +72,10 @@ public class MainApplication extends javax.swing.JFrame {
                //No ID Issued CheckIN, Check out time
                jLabelIdIssuedCheckInTime.setText(dtf.format(now));
                jLabelIdIssuedCheckOutTime.setText(dtf.format(now));
+               
+               //parking CheckIn,Out time
+                txtPcheckInTime.setText(dtf.format(now));
+                jLabelParkingCheckOutTime.setText(dtf.format(now));
         
     }
     
@@ -155,22 +163,34 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        txtPnic = new javax.swing.JTextField();
+        txtPvehiNoPlate = new javax.swing.JTextField();
+        txtPspotNo = new javax.swing.JTextField();
         jButton8 = new javax.swing.JButton();
+        ParkingCheckInTime = new javax.swing.JLabel();
+        ParkingCheckInDate = new javax.swing.JLabel();
+        txtPcheckInTime = new javax.swing.JLabel();
+        txtPcheckInDate = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel22 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        txtpayndepartnic = new javax.swing.JTextField();
         jButton9 = new javax.swing.JButton();
-        jLabel24 = new javax.swing.JLabel();
+        txtPfee = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabelParkingCheckOutDate = new javax.swing.JLabel();
+        jLabelParkingCheckOutTime = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<String>();
         jButton10 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jParkingTable = new javax.swing.JTable();
         panel_lost = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
@@ -644,6 +664,15 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel21.setText("Parking Spot No");
 
         jButton8.setText("Park");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        ParkingCheckInTime.setText("Time");
+
+        ParkingCheckInDate.setText("Date");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -659,16 +688,23 @@ public class MainApplication extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel20)
                             .addComponent(jLabel19)
-                            .addComponent(jLabel21))
+                            .addComponent(jLabel21)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(ParkingCheckInDate)
+                                .addComponent(ParkingCheckInTime)))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField4)
-                            .addComponent(jTextField7)
-                            .addComponent(jTextField8, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(114, 114, 114)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(txtPnic)
+                                .addComponent(txtPvehiNoPlate)
+                                .addComponent(txtPspotNo, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
+                                .addComponent(txtPcheckInTime, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(txtPcheckInDate, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(47, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(134, 134, 134))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -678,18 +714,26 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPnic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPvehiNoPlate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel21)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                    .addComponent(txtPspotNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ParkingCheckInTime)
+                    .addComponent(txtPcheckInTime, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ParkingCheckInDate)
+                    .addComponent(txtPcheckInDate, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(jButton8)
-                .addGap(31, 31, 31))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -701,8 +745,17 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel25.setText("Parking Fee");
 
         jButton9.setText("Pay");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
 
-        jLabel24.setText("jLabel24");
+        txtPfee.setText("Rs. 50");
+
+        jLabel51.setText("Date");
+
+        jLabel54.setText("Time");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -717,15 +770,20 @@ public class MainApplication extends javax.swing.JFrame {
                         .addGap(57, 57, 57)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel25)
-                            .addComponent(jLabel23))
+                            .addComponent(jLabel23)
+                            .addComponent(jLabel54)
+                            .addComponent(jLabel51))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(txtPfee, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabelParkingCheckOutTime, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(txtpayndepartnic, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
+                            .addComponent(jLabelParkingCheckOutDate, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(117, 117, 117)
+                        .addGap(134, 134, 134)
                         .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -735,14 +793,22 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel23)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtpayndepartnic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelParkingCheckOutTime, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel54))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel51)
+                    .addComponent(jLabelParkingCheckOutDate, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel25)
-                    .addComponent(jLabel24))
-                .addGap(34, 34, 34)
+                    .addComponent(txtPfee)
+                    .addComponent(jLabel25))
+                .addGap(18, 18, 18)
                 .addComponent(jButton9)
-                .addContainerGap(84, Short.MAX_VALUE))
+                .addGap(15, 15, 15))
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -751,9 +817,43 @@ public class MainApplication extends javax.swing.JFrame {
 
         jLabel27.setText("Search By: ");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Parked", "Took off", "by spot number" }));
+        jButton10.setText("Parked");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
-        jButton10.setText("Show");
+        jButton14.setText("Took off");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        jButton18.setText("By Spot Number");
+        jButton18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton18ActionPerformed(evt);
+            }
+        });
+
+        jButton19.setText("Clear");
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton19ActionPerformed(evt);
+            }
+        });
+
+        jParkingTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "NIC", "VehicleNumberPlate", "ParkingSpotNo", "CheckInTime", "CheckInDate", "CheckOutTime", "CheckOutDate", "PaymentFee"
+            }
+        ));
+        jScrollPane4.setViewportView(jParkingTable);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -765,24 +865,35 @@ public class MainApplication extends javax.swing.JFrame {
                         .addGap(362, 362, 362)
                         .addComponent(jLabel26))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(316, 316, 316)
+                        .addGap(71, 71, 71)
                         .addComponent(jLabel27)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton10)))
-                .addContainerGap(327, Short.MAX_VALUE))
+                        .addGap(38, 38, 38)
+                        .addComponent(jButton10)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton14)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton18)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton19))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 794, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel26)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(20, 20, 20)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel27)
-                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton10))
+                    .addComponent(jButton10)
+                    .addComponent(jButton14)
+                    .addComponent(jButton18)
+                    .addComponent(jButton19))
+                .addGap(31, 31, 31)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -792,9 +903,9 @@ public class MainApplication extends javax.swing.JFrame {
             panel_parkingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_parkingLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panel_parkingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panel_parkingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -807,9 +918,9 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(panel_parkingLayout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 48, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -1905,6 +2016,231 @@ public class MainApplication extends javax.swing.JFrame {
             }
     }//GEN-LAST:event_jButtonResolvedActionPerformed
 
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
+        // TODO add your handling code here:
+        
+         try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            
+
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
+
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
+            
+          
+           Date date = new Date();
+           java.sql.Date sqldate= new java.sql.Date(date.getTime());
+            
+            
+            String sql = "Insert into parking(NIC,VehicleNumberPlate,ParkingSpotNo,CheckInTime,CheckInDate) Values(?,?,?,?,?)";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, txtPnic.getText());
+            pst.setString(2, txtPvehiNoPlate.getText());
+            pst.setString(3, txtPspotNo.getText());  
+            pst.setTimestamp(4, new Timestamp(System.currentTimeMillis())); 
+            pst.setDate(5, sqldate);
+           
+           
+               
+            
+            pst.executeUpdate();
+               JOptionPane.showMessageDialog(null, "Record Inserted Successfully");
+               txtPnic.setText("");
+               txtPvehiNoPlate.setText("");
+               txtPspotNo.setText("");
+              
+               
+               
+               
+               con.close();
+        
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+        
+    }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+        // TODO add your handling code here:
+        
+               try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            
+
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
+
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
+            
+          
+           Date date = new Date();
+           java.sql.Date sqldate= new java.sql.Date(date.getTime());
+            
+            
+            String sql = "Update parking set CheckOutTime=?,CheckOutDate=?,PaymentFee=? Where NIC=?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, jLabelParkingCheckOutTime.getText());
+            pst.setString(2, jLabelParkingCheckOutDate.getText());
+            pst.setString(3, txtPfee.getText());  
+            pst.setString(4, txtpayndepartnic.getText()); 
+            
+           
+           
+               
+            
+            pst.executeUpdate();
+               JOptionPane.showMessageDialog(null, "Record Inserted Successfully");
+               txtpayndepartnic.setText("");
+               
+              
+               
+               
+               
+               con.close();
+        
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+    }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton19ActionPerformed
+        // TODO add your handling code here:
+        jParkingTable.setModel(new DefaultTableModel(null,new String[]{"NIC","VehicleNumberPlate","ParkingSpotNo","CheckInTime","CheckInDate","CheckOutTime","CheckOutDate","PaymentFee"}));
+    }//GEN-LAST:event_jButton19ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        try {
+              Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            
+
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
+
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
+            
+            
+            
+            Statement st = con.createStatement();
+            String sql = "Select NIC,VehicleNumberPlate,ParkingSpotNo,CheckInTime,CheckInDate from parking where CheckOutTime IS Null";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                String nic = rs.getString("NIC");
+                String vehiclenoplate  = rs.getString("VehicleNumberPlate");
+                String parkingspotno = rs.getString("ParkingSpotNo");
+                String checkintime = rs.getString("CheckInTime");
+                String cjeckindate = rs.getString("CheckInDate");
+             
+                
+                String tbData[]=  {nic,vehiclenoplate,parkingspotno,checkintime,cjeckindate};
+                DefaultTableModel tblModel = (DefaultTableModel)jParkingTable.getModel();
+                
+                tblModel.addRow(tbData);
+            }
+               
+               con.close();
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+        
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        // TODO add your handling code here:
+        try {
+              Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            
+
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
+
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
+            
+            
+            
+            Statement st = con.createStatement();
+            String sql = "Select NIC,VehicleNumberPlate,ParkingSpotNo,CheckInTime,CheckInDate,CheckOutTime,CheckOutDate,PaymentFee from parking where CheckOutTime IS NOT NULL";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                String nic = rs.getString("NIC");
+                String vehiclenoplate  = rs.getString("VehicleNumberPlate");
+                String parkingspotno = rs.getString("ParkingSpotNo");
+                String checkintime = rs.getString("CheckInTime");
+                String checkindate = rs.getString("CheckInDate");
+                String checkouttime = rs.getString("CheckOutTime");
+                String checkoutdate = rs.getString("CheckOutDate");
+                String paymentfee = rs.getString("PaymentFee");
+          
+             
+                
+                String tbData[]=  {nic,vehiclenoplate,parkingspotno,checkintime,checkindate,checkouttime,checkoutdate,paymentfee};
+                DefaultTableModel tblModel = (DefaultTableModel)jParkingTable.getModel();
+                
+                tblModel.addRow(tbData);
+            }
+               
+               con.close();
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+          
+    }//GEN-LAST:event_jButton14ActionPerformed
+
+    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
+        // TODO add your handling code here:
+        try {
+              Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            
+
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
+
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
+            
+            
+            
+            Statement st = con.createStatement();
+            String sql = "Select * from parking ORDER BY ParkingSpotNo ASC";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                String nic = rs.getString("NIC");
+                String vehiclenoplate  = rs.getString("VehicleNumberPlate");
+                String parkingspotno = rs.getString("ParkingSpotNo");
+                String checkintime = rs.getString("CheckInTime");
+                String checkindate = rs.getString("CheckInDate");
+                String checkouttime = rs.getString("CheckOutTime");
+                String checkoutdate = rs.getString("CheckOutDate");
+                String paymentfee = rs.getString("PaymentFee");
+          
+             
+                
+                String tbData[]=  {nic,vehiclenoplate,parkingspotno,checkintime,checkindate,checkouttime,checkoutdate,paymentfee};
+                DefaultTableModel tblModel = (DefaultTableModel)jParkingTable.getModel();
+                
+                tblModel.addRow(tbData);
+            }
+               
+               con.close();
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+    }//GEN-LAST:event_jButton18ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1941,6 +2277,8 @@ public class MainApplication extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ParkingCheckInDate;
+    private javax.swing.JLabel ParkingCheckInTime;
     private javax.swing.JButton Submit;
     private org.joda.time.DateMidnight dateMidnight1;
     private org.joda.time.DateTime dateTime1;
@@ -1954,9 +2292,12 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1973,7 +2314,6 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JButton jButtonclear;
     private javax.swing.JButton jButtonfound;
     private javax.swing.JButton jButtonlost;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1991,7 +2331,6 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
@@ -2021,8 +2360,10 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -2031,6 +2372,8 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelIdIssuedCheckInTime;
     private javax.swing.JLabel jLabelIdIssuedCheckOutDate;
     private javax.swing.JLabel jLabelIdIssuedCheckOutTime;
+    private javax.swing.JLabel jLabelParkingCheckOutDate;
+    private javax.swing.JLabel jLabelParkingCheckOutTime;
     private javax.swing.JLabel jLabelVisitorCheckInDate;
     private javax.swing.JLabel jLabelVisitorCheckInTime;
     private javax.swing.JLabel jLabelVisitorCheckOutTime;
@@ -2049,16 +2392,14 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JTable jParkingTable;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField21;
     private javax.swing.JTextField jTextField22;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
     private lu.tudor.santec.jtimechooser.demo.JTimeChooserDemo jTimeChooserDemo1;
     private lu.tudor.santec.jtimechooser.demo.JTimeChooserDemo jTimeChooserDemo2;
     private lu.tudor.santec.jtimechooser.demo.JTimeChooserDemo jTimeChooserDemo3;
@@ -2092,13 +2433,20 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JTextField txtLostPlace;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtNic;
+    private javax.swing.JLabel txtPcheckInDate;
+    private javax.swing.JLabel txtPcheckInTime;
+    private javax.swing.JLabel txtPfee;
     private javax.swing.JTextField txtPhoneNo;
+    private javax.swing.JTextField txtPnic;
+    private javax.swing.JTextField txtPspotNo;
     private javax.swing.JTextField txtPurpose;
+    private javax.swing.JTextField txtPvehiNoPlate;
     private javax.swing.JTextField txtfitemdes;
     private javax.swing.JTextField txtfitemid;
     private javax.swing.JTextField txtfplace;
     private javax.swing.JTextField txtfuid;
     private javax.swing.JTextField txtowitemid;
     private javax.swing.JTextField txtownerid;
+    private javax.swing.JTextField txtpayndepartnic;
     // End of variables declaration//GEN-END:variables
 }
