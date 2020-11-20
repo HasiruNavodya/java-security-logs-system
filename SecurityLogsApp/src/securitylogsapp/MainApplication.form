@@ -99,15 +99,34 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="24" style="1"/>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Java Project"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Comic Sans MS" size="36" style="1"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Welcome to Security Logs App"/>
                 <Property name="horizontalTextPosition" type="int" value="4"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="540" y="0" width="148" height="90"/>
+                  <AbsoluteConstraints x="480" y="0" width="620" height="90"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel55">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/window-1231894_1920.jpg"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="jLabel55"/>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="-2" y="-4" width="1470" height="120"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -125,37 +144,18 @@
             </Constraint>
           </Constraints>
 
-          <Layout>
-            <DimensionLayout dim="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jButton2" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jButton5" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jButton4" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jButton3" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jButton1" alignment="0" max="32767" attributes="0"/>
-              </Group>
-            </DimensionLayout>
-            <DimensionLayout dim="1">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="46" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton3" min="-2" pref="48" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton4" min="-2" pref="49" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton2" min="-2" pref="51" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton5" min="-2" pref="50" max="-2" attributes="0"/>
-                      <EmptySpace pref="361" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-            </DimensionLayout>
+          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout">
+            <Property name="useNullLayout" type="boolean" value="false"/>
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JButton" name="jButton1">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Comic Sans MS" size="13" style="1"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/visitor-identification.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Visitors"/>
               </Properties>
               <AccessibilityProperties>
@@ -164,9 +164,20 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
               </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="0" y="30" width="191" height="50"/>
+                </Constraint>
+              </Constraints>
             </Component>
             <Component class="javax.swing.JButton" name="jButton2">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Comic Sans MS" size="13" style="1"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/user-name.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="No ID Issued"/>
               </Properties>
               <AccessibilityProperties>
@@ -175,9 +186,20 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
               </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="0" y="270" width="191" height="51"/>
+                </Constraint>
+              </Constraints>
             </Component>
             <Component class="javax.swing.JButton" name="jButton3">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Comic Sans MS" size="13" style="1"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/parked-car.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Parking"/>
               </Properties>
               <AccessibilityProperties>
@@ -186,9 +208,20 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
               </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="0" y="110" width="191" height="-1"/>
+                </Constraint>
+              </Constraints>
             </Component>
             <Component class="javax.swing.JButton" name="jButton4">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Comic Sans MS" size="13" style="1"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/lost.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Lost and Found"/>
               </Properties>
               <AccessibilityProperties>
@@ -197,9 +230,17 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
               </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="0" y="190" width="191" height="49"/>
+                </Constraint>
+              </Constraints>
             </Component>
             <Component class="javax.swing.JButton" name="jButton5">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Comic Sans MS" size="13" style="1"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Extra"/>
               </Properties>
               <AccessibilityProperties>
@@ -208,6 +249,23 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
               </Events>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="0" y="350" width="191" height="50"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel56">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/window-1231894_1920.jpg"/>
+                </Property>
+              </Properties>
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="0" y="0" width="190" height="700"/>
+                </Constraint>
+              </Constraints>
             </Component>
           </SubComponents>
         </Container>
@@ -228,7 +286,7 @@
               </AccessibilityProperties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="0" y="10" width="1280" height="660"/>
+                  <AbsoluteConstraints x="0" y="-30" width="1280" height="720"/>
                 </Constraint>
               </Constraints>
 
@@ -318,15 +376,11 @@
                                                   <Component id="jLabelVisitorCheckInTime" alignment="0" pref="98" max="32767" attributes="0"/>
                                                   <Component id="jLabelVisitorCheckInDate" alignment="0" max="32767" attributes="0"/>
                                               </Group>
+                                              <Component id="jButton6" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="jButton6" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -375,9 +429,9 @@
                                       <Component id="txtPhoneNo" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="28" max="32767" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jButton6" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace pref="16" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -385,11 +439,17 @@
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel7">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Microsoft Tai Le" size="14" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Check In"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel2">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Name"/>
                           </Properties>
                           <AccessibilityProperties>
@@ -397,12 +457,20 @@
                           </AccessibilityProperties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txtName">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="0"/>
+                            </Property>
+                          </Properties>
                           <AccessibilityProperties>
                             <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="txtName"/>
                           </AccessibilityProperties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel3">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="NIC Number"/>
                           </Properties>
                           <AccessibilityProperties>
@@ -410,12 +478,20 @@
                           </AccessibilityProperties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txtNic">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="0"/>
+                            </Property>
+                          </Properties>
                           <AccessibilityProperties>
                             <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="txtNic"/>
                           </AccessibilityProperties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel4">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Date"/>
                           </Properties>
                           <AccessibilityProperties>
@@ -424,6 +500,9 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel5">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Time"/>
                           </Properties>
                           <AccessibilityProperties>
@@ -432,6 +511,9 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel6">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Purpose"/>
                           </Properties>
                           <AccessibilityProperties>
@@ -439,12 +521,20 @@
                           </AccessibilityProperties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txtPurpose">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="0"/>
+                            </Property>
+                          </Properties>
                           <AccessibilityProperties>
                             <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="txtPurpose"/>
                           </AccessibilityProperties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel8">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Inventory"/>
                           </Properties>
                           <AccessibilityProperties>
@@ -461,6 +551,9 @@
                             <Component class="javax.swing.JTextArea" name="txtInventory">
                               <Properties>
                                 <Property name="columns" type="int" value="20"/>
+                                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                  <Font name="Comic Sans MS" size="12" style="0"/>
+                                </Property>
                                 <Property name="rows" type="int" value="5"/>
                               </Properties>
                             </Component>
@@ -468,6 +561,9 @@
                         </Container>
                         <Component class="javax.swing.JLabel" name="jLabel12">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Phone No"/>
                           </Properties>
                           <AccessibilityProperties>
@@ -475,12 +571,23 @@
                           </AccessibilityProperties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txtPhoneNo">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="0"/>
+                            </Property>
+                          </Properties>
                           <AccessibilityProperties>
                             <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="txtPhoneNo"/>
                           </AccessibilityProperties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton6">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/tick.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Submit"/>
                           </Properties>
                           <AccessibilityProperties>
@@ -491,8 +598,18 @@
                           </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabelVisitorCheckInDate">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabelVisitorCheckInTime">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                          </Properties>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -525,18 +642,16 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="txtCheckOutNIC" max="32767" attributes="0"/>
                                               <Group type="102" attributes="0">
-                                                  <Component id="jLabelVisitorCheckOutTime" min="-2" pref="77" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="Submit" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabelVisitorCheckOutTime" min="-2" pref="77" max="-2" attributes="0"/>
+                                                  </Group>
                                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="Submit" min="-2" pref="79" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="134" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -557,7 +672,7 @@
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="Submit" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="95" max="32767" attributes="0"/>
+                                  <EmptySpace pref="125" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -565,25 +680,50 @@
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel13">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Microsoft Tai Le" size="14" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Check Out"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel14">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="NIC Number"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txtCheckOutNIC">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="0"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel15">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Time"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabelVisitorCheckOutTime">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="Submit">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/tick.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Submit"/>
                           </Properties>
                           <Events>
@@ -629,7 +769,7 @@
                                           <Component id="jScrollPane2" min="-2" pref="764" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="61" max="32767" attributes="0"/>
+                                  <EmptySpace pref="54" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -657,16 +797,28 @@
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel16">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Entries"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel17">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Search by :"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton7">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/magnifier.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="All Entries"/>
                           </Properties>
                           <Events>
@@ -747,6 +899,12 @@
                         </Container>
                         <Component class="javax.swing.JButton" name="jButtonArrived">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/check-in.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Arrived"/>
                           </Properties>
                           <Events>
@@ -755,6 +913,12 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButtonDeparted">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/check-out.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Departed"/>
                           </Properties>
                           <Events>
@@ -763,6 +927,12 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButtonChronological">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/clock.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Chronological"/>
                           </Properties>
                           <Events>
@@ -771,6 +941,12 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButtonClear">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                              <Image iconType="3" name="/clear.png"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Clear"/>
                           </Properties>
                           <Events>
@@ -821,8 +997,7 @@
                                   <Group type="102" attributes="0">
                                       <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="48" max="32767" attributes="0"/>
+                                      <Component id="jPanel3" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -913,7 +1088,7 @@
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jButton8" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="7" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -921,32 +1096,62 @@
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel18">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Microsoft Tai Le" size="14" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Check In"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel19">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="NIC"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel20">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Vehicle Number PLate"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel21">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Parking Spot No"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txtPnic">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txtPvehiNoPlate">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txtPspotNo">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton8">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Park"/>
                           </Properties>
                           <Events>
@@ -955,17 +1160,33 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="ParkingCheckInTime">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Time"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="ParkingCheckInDate">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Date"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="txtPcheckInTime">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="txtPcheckInDate">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                          </Properties>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -1034,7 +1255,7 @@
                                       <Component id="jLabel51" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabelParkingCheckOutDate" min="-2" pref="25" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="26" max="32767" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="txtPfee" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1049,23 +1270,40 @@
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel22">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Microsoft Tai Le" size="14" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Pay and Depart"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel23">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="NIC"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel25">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Parking Fee"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JTextField" name="txtpayndepartnic">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton9">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Pay"/>
                           </Properties>
                           <Events>
@@ -1074,22 +1312,41 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="txtPfee">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Rs. 50"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel51">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Date"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel54">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Time"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabelParkingCheckOutDate">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabelParkingCheckOutTime">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                          </Properties>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -1112,15 +1369,15 @@
                                           <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <EmptySpace min="-2" pref="71" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="126" max="-2" attributes="0"/>
                                           <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                           <Component id="jButton10" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                           <Component id="jButton14" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
                                           <Component id="jButton18" min="-2" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                                           <Component id="jButton19" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -1128,7 +1385,7 @@
                                           <Component id="jScrollPane4" min="-2" pref="794" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="80" max="32767" attributes="0"/>
+                                  <EmptySpace pref="77" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1146,8 +1403,8 @@
                                       <Component id="jButton19" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane4" min="-2" pref="478" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jScrollPane4" min="-2" pref="441" max="-2" attributes="0"/>
+                                  <EmptySpace pref="112" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1155,16 +1412,25 @@
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel26">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Parking Log"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel27">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Search By: "/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton10">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Parked"/>
                           </Properties>
                           <Events>
@@ -1173,6 +1439,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton14">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Took off"/>
                           </Properties>
                           <Events>
@@ -1181,6 +1450,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton18">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="By Spot Number"/>
                           </Properties>
                           <Events>
@@ -1189,6 +1461,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton19">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Clear"/>
                           </Properties>
                           <Events>
@@ -1285,12 +1560,14 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                  <Component id="jPanel9" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jPanel10" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="jPanel9" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jPanel5" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="jPanel10" alignment="1" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jPanel11" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                           </Group>
@@ -1304,10 +1581,10 @@
                                   <Component id="jPanel11" max="32767" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="jPanel10" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jPanel10" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -1389,9 +1666,9 @@
                                       <Component id="jLabel32" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtLostPlace" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="20" max="32767" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jButton11" min="-2" pref="32" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace pref="14" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1399,11 +1676,17 @@
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel11">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Microsoft Tai Le" size="14" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Report lost item"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel30">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="UID"/>
                           </Properties>
                         </Component>
@@ -1411,6 +1694,9 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel31">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Item Description"/>
                           </Properties>
                         </Component>
@@ -1418,6 +1704,9 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel32">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="lost place"/>
                           </Properties>
                         </Component>
@@ -1425,6 +1714,9 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel10">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Item ID"/>
                           </Properties>
                         </Component>
@@ -1432,6 +1724,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton11">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Add lost item"/>
                           </Properties>
                           <Events>
@@ -1440,6 +1735,9 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel9">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Lost Date"/>
                           </Properties>
                         </Component>
@@ -1525,7 +1823,7 @@
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jButton12" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="11" max="32767" attributes="0"/>
+                                  <EmptySpace pref="17" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1533,11 +1831,17 @@
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel28">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Microsoft Tai Le" size="14" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Found Items"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel33">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="UID"/>
                           </Properties>
                         </Component>
@@ -1545,6 +1849,9 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel34">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Item ID"/>
                           </Properties>
                         </Component>
@@ -1552,6 +1859,9 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel35">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Item Description"/>
                           </Properties>
                         </Component>
@@ -1559,6 +1869,9 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel36">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Found Place"/>
                           </Properties>
                         </Component>
@@ -1566,7 +1879,10 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton12">
                           <Properties>
-                            <Property name="text" type="java.lang.String" value="report found item"/>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                            <Property name="text" type="java.lang.String" value="Report found item"/>
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
@@ -1574,6 +1890,9 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel52">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Found Date"/>
                           </Properties>
                         </Component>
@@ -1593,11 +1912,6 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                  <Component id="jButton13" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="204" max="-2" attributes="0"/>
-                              </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
@@ -1616,7 +1930,12 @@
                                           <Component id="jowndate" min="-2" pref="146" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
+                                  <EmptySpace pref="32" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jButton13" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="207" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1624,23 +1943,25 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="jowndate" min="-2" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="txtowitemid" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel37" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel53" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
+                                      <Component id="jowndate" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="txtownerid" alignment="3" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel38" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="txtownerid" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jButton13" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jButton13" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="49" max="32767" attributes="0"/>
+                                  <EmptySpace pref="64" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1648,11 +1969,17 @@
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel29">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Microsoft Tai Le" size="14" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Owner found"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel37">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Item ID"/>
                           </Properties>
                         </Component>
@@ -1660,6 +1987,9 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel38">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Owner UID"/>
                           </Properties>
                         </Component>
@@ -1667,6 +1997,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton13">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Found owner"/>
                           </Properties>
                           <Events>
@@ -1677,6 +2010,9 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel53">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Own Date"/>
                           </Properties>
                         </Component>
@@ -1697,29 +2033,28 @@
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Group type="102" attributes="0">
-                                                  <EmptySpace min="-2" pref="267" max="-2" attributes="0"/>
-                                                  <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
-                                                  <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jButtonlost" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jButtonfound" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jButtonResolved" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jButtonclear" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                          <EmptySpace min="0" pref="165" max="32767" attributes="0"/>
+                                          <EmptySpace min="-2" pref="267" max="-2" attributes="0"/>
+                                          <Component id="jLabel39" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <Component id="jScrollPane3" alignment="1" max="32767" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="160" max="-2" attributes="0"/>
+                                          <Component id="jLabel40" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jButtonlost" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jButtonfound" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jButtonResolved" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jButtonclear" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
+                                  <EmptySpace pref="152" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                  <Component id="jScrollPane3" min="-2" pref="663" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1746,16 +2081,25 @@
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel39">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Lost and Found logs"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel40">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Search By: "/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButtonlost">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Lost"/>
                           </Properties>
                           <Events>
@@ -1764,6 +2108,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButtonfound">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Found"/>
                           </Properties>
                           <Events>
@@ -1772,6 +2119,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButtonResolved">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Resolved"/>
                           </Properties>
                           <Events>
@@ -1780,6 +2130,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButtonclear">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Clear"/>
                           </Properties>
                           <Events>
@@ -1891,7 +2244,7 @@
                       </Properties>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="10" y="300" width="-1" height="250"/>
+                          <AbsoluteConstraints x="7" y="330" width="370" height="310"/>
                         </Constraint>
                       </Constraints>
 
@@ -1912,7 +2265,7 @@
                                           </Group>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="36" max="32767" attributes="0"/>
+                                  <EmptySpace pref="32" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                           <Component id="jLabelIdIssuedCheckOutTime" alignment="0" pref="90" max="32767" attributes="0"/>
@@ -1959,7 +2312,7 @@
                                   </Group>
                                   <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                                   <Component id="jButton15" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="14" max="32767" attributes="0"/>
+                                  <EmptySpace pref="70" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -1967,11 +2320,17 @@
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel41">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Microsoft Tai Le" size="14" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Check Out"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel43">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="NIC Number"/>
                           </Properties>
                         </Component>
@@ -1979,16 +2338,25 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel44">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Date"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel45">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Time"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton15">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Submit"/>
                           </Properties>
                           <Events>
@@ -1996,8 +2364,18 @@
                           </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabelIdIssuedCheckOutDate">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabelIdIssuedCheckOutTime">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                          </Properties>
                         </Component>
                       </SubComponents>
                     </Container>
@@ -2011,7 +2389,7 @@
                       </Properties>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="10" y="30" width="-1" height="250"/>
+                          <AbsoluteConstraints x="7" y="20" width="370" height="300"/>
                         </Constraint>
                       </Constraints>
 
@@ -2033,14 +2411,12 @@
                                           <Component id="jLabel48" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace type="separate" pref="36" max="32767" attributes="0"/>
+                                  <EmptySpace type="separate" pref="32" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="jButton16" min="-2" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                              <Component id="jLabelIdIssuedCheckInTime" alignment="1" pref="86" max="32767" attributes="0"/>
-                                              <Component id="jLabelIdIssuedCheckInDate" max="32767" attributes="0"/>
-                                          </Group>
+                                          <Component id="jLabelIdIssuedCheckInTime" alignment="1" pref="198" max="32767" attributes="0"/>
+                                          <Component id="jLabelIdIssuedCheckInDate" alignment="1" max="32767" attributes="0"/>
                                           <Component id="textidnic" max="32767" attributes="0"/>
                                           <Component id="txtidname" alignment="0" pref="198" max="32767" attributes="0"/>
                                       </Group>
@@ -2064,7 +2440,7 @@
                                       <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="txtidname" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="13" max="32767" attributes="0"/>
+                                  <EmptySpace pref="36" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Component id="jLabelIdIssuedCheckInDate" min="-2" pref="24" max="-2" attributes="0"/>
                                       <Component id="jLabel47" min="-2" max="-2" attributes="0"/>
@@ -2074,7 +2450,7 @@
                                       <Component id="jLabelIdIssuedCheckInTime" min="-2" pref="22" max="-2" attributes="0"/>
                                       <Component id="jLabel48" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="22" max="32767" attributes="0"/>
+                                  <EmptySpace pref="45" max="32767" attributes="0"/>
                                   <Component id="jButton16" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                               </Group>
@@ -2084,11 +2460,17 @@
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel42">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Microsoft Tai Le" size="14" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Check In"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel46">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="NIC Number"/>
                           </Properties>
                         </Component>
@@ -2096,16 +2478,25 @@
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel47">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Date"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel48">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Time"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton16">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Submit"/>
                           </Properties>
                           <Events>
@@ -2113,11 +2504,24 @@
                           </Events>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabelIdIssuedCheckInDate">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabelIdIssuedCheckInTime">
+                          <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
+                          </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel24">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Name"/>
                           </Properties>
                         </Component>
@@ -2135,7 +2539,7 @@
                       </Properties>
                       <Constraints>
                         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                          <AbsoluteConstraints x="380" y="20" width="760" height="540"/>
+                          <AbsoluteConstraints x="390" y="20" width="880" height="620"/>
                         </Constraint>
                       </Constraints>
 
@@ -2158,12 +2562,12 @@
                                   <Component id="jButton21" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jButton22" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="89" max="32767" attributes="0"/>
+                                  <EmptySpace pref="204" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jScrollPane5" min="-2" pref="559" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane5" min="-2" pref="748" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2182,7 +2586,7 @@
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jScrollPane5" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="33" max="32767" attributes="0"/>
+                                  <EmptySpace pref="109" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2190,16 +2594,25 @@
                       <SubComponents>
                         <Component class="javax.swing.JLabel" name="jLabel49">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Lost and Found logs"/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel50">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Search By: "/>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton17">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="In Campus"/>
                           </Properties>
                           <Events>
@@ -2208,6 +2621,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton20">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Left"/>
                           </Properties>
                           <Events>
@@ -2216,6 +2632,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton21">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Chronological"/>
                           </Properties>
                           <Events>
@@ -2224,6 +2643,9 @@
                         </Component>
                         <Component class="javax.swing.JButton" name="jButton22">
                           <Properties>
+                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                              <Font name="Comic Sans MS" size="12" style="1"/>
+                            </Property>
                             <Property name="text" type="java.lang.String" value="Clear"/>
                           </Properties>
                           <Events>

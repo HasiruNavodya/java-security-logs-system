@@ -113,12 +113,14 @@ public class MainApplication extends javax.swing.JFrame {
         panel_base = new javax.swing.JPanel();
         panel_top = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
         panel_left = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
+        jLabel56 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         panel_visit = new javax.swing.JPanel();
@@ -274,81 +276,78 @@ public class MainApplication extends javax.swing.JFrame {
         panel_top.setBackground(new java.awt.Color(102, 102, 102));
         panel_top.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setText("Java Project");
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Welcome to Security Logs App");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        panel_top.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 0, 148, 90));
+        panel_top.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 620, 90));
+
+        jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/window-1231894_1920.jpg"))); // NOI18N
+        jLabel55.setText("jLabel55");
+        panel_top.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, -4, 1470, 120));
 
         panel_base.add(panel_top, java.awt.BorderLayout.PAGE_START);
 
         panel_left.setBackground(new java.awt.Color(153, 153, 153));
+        panel_left.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/visitor-identification.png"))); // NOI18N
         jButton1.setText("Visitors");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        panel_left.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 30, 191, 50));
+        jButton1.getAccessibleContext().setAccessibleName("jButtonVisitors");
 
+        jButton2.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/user-name.png"))); // NOI18N
         jButton2.setText("No ID Issued");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
+        panel_left.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 191, 51));
+        jButton2.getAccessibleContext().setAccessibleName("jButtonNoIDIssued");
 
+        jButton3.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/parked-car.png"))); // NOI18N
         jButton3.setText("Parking");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
+        panel_left.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 191, -1));
+        jButton3.getAccessibleContext().setAccessibleName("jButtonParking");
 
+        jButton4.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lost.png"))); // NOI18N
         jButton4.setText("Lost and Found");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
+        panel_left.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 191, 49));
+        jButton4.getAccessibleContext().setAccessibleName("jButtonLostNFound");
 
+        jButton5.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
         jButton5.setText("Extra");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout panel_leftLayout = new javax.swing.GroupLayout(panel_left);
-        panel_left.setLayout(panel_leftLayout);
-        panel_leftLayout.setHorizontalGroup(
-            panel_leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        panel_leftLayout.setVerticalGroup(
-            panel_leftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panel_leftLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(361, Short.MAX_VALUE))
-        );
-
-        jButton1.getAccessibleContext().setAccessibleName("jButtonVisitors");
-        jButton2.getAccessibleContext().setAccessibleName("jButtonNoIDIssued");
-        jButton3.getAccessibleContext().setAccessibleName("jButtonParking");
-        jButton4.getAccessibleContext().setAccessibleName("jButtonLostNFound");
+        panel_left.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 191, 50));
         jButton5.getAccessibleContext().setAccessibleName("jButtonExtra");
+
+        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/window-1231894_1920.jpg"))); // NOI18N
+        panel_left.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 700));
 
         panel_base.add(panel_left, java.awt.BorderLayout.LINE_START);
 
@@ -356,32 +355,55 @@ public class MainApplication extends javax.swing.JFrame {
 
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel7.setFont(new java.awt.Font("Microsoft Tai Le", 1, 14)); // NOI18N
         jLabel7.setText("Check In");
 
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel2.setText("Name");
 
+        txtName.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel3.setText("NIC Number");
 
+        txtNic.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel4.setText("Date");
 
+        jLabel5.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel5.setText("Time");
 
+        jLabel6.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel6.setText("Purpose");
 
+        txtPurpose.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+
+        jLabel8.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel8.setText("Inventory");
 
         txtInventory.setColumns(20);
+        txtInventory.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
         txtInventory.setRows(5);
         jScrollPane1.setViewportView(txtInventory);
 
+        jLabel12.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel12.setText("Phone No");
 
+        txtPhoneNo.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+
+        jButton6.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tick.png"))); // NOI18N
         jButton6.setText("Submit");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
+
+        jLabelVisitorCheckInDate.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+
+        jLabelVisitorCheckInTime.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -412,12 +434,9 @@ public class MainApplication extends javax.swing.JFrame {
                             .addComponent(txtPhoneNo, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                 .addComponent(jLabelVisitorCheckInTime, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
-                                .addComponent(jLabelVisitorCheckInDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                .addComponent(jLabelVisitorCheckInDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jButton6))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton6)
-                .addGap(141, 141, 141))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -455,9 +474,9 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtPhoneNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jButton6)
-                .addContainerGap())
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
         jLabel2.getAccessibleContext().setAccessibleName("jLabelName");
@@ -475,12 +494,21 @@ public class MainApplication extends javax.swing.JFrame {
 
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel13.setFont(new java.awt.Font("Microsoft Tai Le", 1, 14)); // NOI18N
         jLabel13.setText("Check Out");
 
+        jLabel14.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel14.setText("NIC Number");
 
+        txtCheckOutNIC.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+
+        jLabel15.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel15.setText("Time");
 
+        jLabelVisitorCheckOutTime.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+
+        Submit.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        Submit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tick.png"))); // NOI18N
         Submit.setText("Submit");
         Submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -507,13 +535,11 @@ public class MainApplication extends javax.swing.JFrame {
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtCheckOutNIC)
                             .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabelVisitorCheckOutTime, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Submit)
+                                    .addComponent(jLabelVisitorCheckOutTime, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Submit, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(134, 134, 134))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -530,15 +556,19 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(jLabelVisitorCheckOutTime, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Submit)
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addContainerGap(125, Short.MAX_VALUE))
         );
 
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel16.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel16.setText("Entries");
 
+        jLabel17.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel17.setText("Search by :");
 
+        jButton7.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/magnifier.png"))); // NOI18N
         jButton7.setText("All Entries");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -556,6 +586,8 @@ public class MainApplication extends javax.swing.JFrame {
         ));
         jScrollPane2.setViewportView(jVisitorsTable1);
 
+        jButtonArrived.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButtonArrived.setIcon(new javax.swing.ImageIcon(getClass().getResource("/check-in.png"))); // NOI18N
         jButtonArrived.setText("Arrived");
         jButtonArrived.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -563,6 +595,8 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        jButtonDeparted.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButtonDeparted.setIcon(new javax.swing.ImageIcon(getClass().getResource("/check-out.png"))); // NOI18N
         jButtonDeparted.setText("Departed");
         jButtonDeparted.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -570,6 +604,8 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        jButtonChronological.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButtonChronological.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clock.png"))); // NOI18N
         jButtonChronological.setText("Chronological");
         jButtonChronological.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -577,6 +613,8 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        jButtonClear.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButtonClear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clear.png"))); // NOI18N
         jButtonClear.setText("Clear");
         jButtonClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -609,7 +647,7 @@ public class MainApplication extends javax.swing.JFrame {
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(54, 54, 54)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 764, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -661,14 +699,25 @@ public class MainApplication extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel18.setFont(new java.awt.Font("Microsoft Tai Le", 1, 14)); // NOI18N
         jLabel18.setText("Check In");
 
+        jLabel19.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel19.setText("NIC");
 
+        jLabel20.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel20.setText("Vehicle Number PLate");
 
+        jLabel21.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel21.setText("Parking Spot No");
 
+        txtPnic.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+
+        txtPvehiNoPlate.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+
+        txtPspotNo.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+
+        jButton8.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButton8.setText("Park");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -676,9 +725,15 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        ParkingCheckInTime.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         ParkingCheckInTime.setText("Time");
 
+        ParkingCheckInDate.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         ParkingCheckInDate.setText("Date");
+
+        txtPcheckInTime.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+
+        txtPcheckInDate.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -739,17 +794,23 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(txtPcheckInDate, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton8)
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel22.setFont(new java.awt.Font("Microsoft Tai Le", 1, 14)); // NOI18N
         jLabel22.setText("Pay and Depart");
 
+        jLabel23.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel23.setText("NIC");
 
+        jLabel25.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel25.setText("Parking Fee");
 
+        txtpayndepartnic.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+
+        jButton9.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButton9.setText("Pay");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -757,11 +818,18 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        txtPfee.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         txtPfee.setText("Rs. 50");
 
+        jLabel51.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel51.setText("Date");
 
+        jLabel54.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel54.setText("Time");
+
+        jLabelParkingCheckOutDate.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+
+        jLabelParkingCheckOutTime.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -808,7 +876,7 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel51)
                     .addComponent(jLabelParkingCheckOutDate, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtPfee)
                     .addComponent(jLabel25))
@@ -819,10 +887,13 @@ public class MainApplication extends javax.swing.JFrame {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel26.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel26.setText("Parking Log");
 
+        jLabel27.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel27.setText("Search By: ");
 
+        jButton10.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButton10.setText("Parked");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -830,6 +901,7 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        jButton14.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButton14.setText("Took off");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -837,6 +909,7 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        jButton18.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButton18.setText("By Spot Number");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -844,6 +917,7 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        jButton19.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButton19.setText("Clear");
         jButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -871,20 +945,20 @@ public class MainApplication extends javax.swing.JFrame {
                         .addGap(362, 362, 362)
                         .addComponent(jLabel26))
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
+                        .addGap(126, 126, 126)
                         .addComponent(jLabel27)
-                        .addGap(38, 38, 38)
+                        .addGap(30, 30, 30)
                         .addComponent(jButton10)
-                        .addGap(18, 18, 18)
+                        .addGap(30, 30, 30)
                         .addComponent(jButton14)
-                        .addGap(18, 18, 18)
+                        .addGap(38, 38, 38)
                         .addComponent(jButton18)
-                        .addGap(18, 18, 18)
+                        .addGap(37, 37, 37)
                         .addComponent(jButton19))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 794, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -899,8 +973,8 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(jButton18)
                     .addComponent(jButton19))
                 .addGap(31, 31, 31)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 478, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panel_parkingLayout = new javax.swing.GroupLayout(panel_parking);
@@ -925,8 +999,7 @@ public class MainApplication extends javax.swing.JFrame {
                     .addGroup(panel_parkingLayout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 48, Short.MAX_VALUE)))
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -934,16 +1007,22 @@ public class MainApplication extends javax.swing.JFrame {
 
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel11.setFont(new java.awt.Font("Microsoft Tai Le", 1, 14)); // NOI18N
         jLabel11.setText("Report lost item");
 
+        jLabel30.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel30.setText("UID");
 
+        jLabel31.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel31.setText("Item Description");
 
+        jLabel32.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel32.setText("lost place");
 
+        jLabel10.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel10.setText("Item ID");
 
+        jButton11.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButton11.setText("Add lost item");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -951,6 +1030,7 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        jLabel9.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel9.setText("Lost Date");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -1005,30 +1085,37 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel32)
                     .addComponent(txtLostPlace, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel28.setFont(new java.awt.Font("Microsoft Tai Le", 1, 14)); // NOI18N
         jLabel28.setText("Found Items");
 
+        jLabel33.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel33.setText("UID");
 
+        jLabel34.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel34.setText("Item ID");
 
+        jLabel35.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel35.setText("Item Description");
 
+        jLabel36.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel36.setText("Found Place");
 
-        jButton12.setText("report found item");
+        jButton12.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton12.setText("Report found item");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton12ActionPerformed(evt);
             }
         });
 
+        jLabel52.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel52.setText("Found Date");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
@@ -1088,17 +1175,21 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(txtfplace, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton12)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
 
         jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel29.setFont(new java.awt.Font("Microsoft Tai Le", 1, 14)); // NOI18N
         jLabel29.setText("Owner found");
 
+        jLabel37.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel37.setText("Item ID");
 
+        jLabel38.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel38.setText("Owner UID");
 
+        jButton13.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButton13.setText("Found owner");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1106,16 +1197,13 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        jLabel53.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel53.setText("Own Date");
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton13)
-                .addGap(204, 204, 204))
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(49, 49, 49)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1131,34 +1219,42 @@ public class MainApplication extends javax.swing.JFrame {
                         .addComponent(jLabel53)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jowndate, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton13)
+                .addGap(207, 207, 207))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addComponent(jLabel29)
-                .addGap(19, 19, 19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jowndate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel37)
                         .addComponent(txtowitemid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel53)))
+                        .addComponent(jLabel37)
+                        .addComponent(jLabel53))
+                    .addComponent(jowndate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtownerid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel38))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton13)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel38)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addComponent(txtownerid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton13)))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel39.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel39.setText("Lost and Found logs");
 
+        jLabel40.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel40.setText("Search By: ");
 
+        jButtonlost.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButtonlost.setText("Lost");
         jButtonlost.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1166,6 +1262,7 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        jButtonfound.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButtonfound.setText("Found");
         jButtonfound.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1173,6 +1270,7 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        jButtonResolved.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButtonResolved.setText("Resolved");
         jButtonResolved.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1180,6 +1278,7 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        jButtonclear.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButtonclear.setText("Clear");
         jButtonclear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1204,24 +1303,24 @@ public class MainApplication extends javax.swing.JFrame {
             .addGroup(jPanel11Layout.createSequentialGroup()
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel11Layout.createSequentialGroup()
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addGap(267, 267, 267)
-                                .addComponent(jLabel39))
-                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addGap(160, 160, 160)
-                                .addComponent(jLabel40)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButtonlost)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButtonfound)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButtonResolved)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButtonclear)))
-                        .addGap(0, 165, Short.MAX_VALUE))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
+                        .addGap(267, 267, 267)
+                        .addComponent(jLabel39))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addComponent(jLabel40)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButtonlost)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButtonfound)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButtonResolved)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButtonclear)))
+                .addContainerGap(152, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
         );
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1246,11 +1345,12 @@ public class MainApplication extends javax.swing.JFrame {
             panel_lostLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_lostLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panel_lostLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panel_lostLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panel_lostLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -1262,10 +1362,10 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(panel_lostLayout.createSequentialGroup()
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -1275,20 +1375,29 @@ public class MainApplication extends javax.swing.JFrame {
 
         jPanel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel41.setFont(new java.awt.Font("Microsoft Tai Le", 1, 14)); // NOI18N
         jLabel41.setText("Check Out");
 
+        jLabel43.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel43.setText("NIC Number");
 
+        jLabel44.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel44.setText("Date");
 
+        jLabel45.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel45.setText("Time");
 
+        jButton15.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButton15.setText("Submit");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton15ActionPerformed(evt);
             }
         });
+
+        jLabelIdIssuedCheckOutDate.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+
+        jLabelIdIssuedCheckOutTime.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -1304,7 +1413,7 @@ public class MainApplication extends javax.swing.JFrame {
                         .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel44, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel45, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jLabelIdIssuedCheckOutTime, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
@@ -1340,21 +1449,26 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(jLabelIdIssuedCheckOutTime, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
                 .addComponent(jButton15)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
-        panel_noid.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, -1, 250));
+        panel_noid.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 330, 370, 310));
 
         jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel42.setFont(new java.awt.Font("Microsoft Tai Le", 1, 14)); // NOI18N
         jLabel42.setText("Check In");
 
+        jLabel46.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel46.setText("NIC Number");
 
+        jLabel47.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel47.setText("Date");
 
+        jLabel48.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel48.setText("Time");
 
+        jButton16.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButton16.setText("Submit");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1362,6 +1476,11 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        jLabelIdIssuedCheckInDate.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+
+        jLabelIdIssuedCheckInTime.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+
+        jLabel24.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel24.setText("Name");
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
@@ -1380,13 +1499,12 @@ public class MainApplication extends javax.swing.JFrame {
                     .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel47)
                         .addComponent(jLabel48)))
-                .addGap(18, 36, Short.MAX_VALUE)
+                .addGap(18, 32, Short.MAX_VALUE)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton16)
                     .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jLabelIdIssuedCheckInTime, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
-                            .addComponent(jLabelIdIssuedCheckInDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabelIdIssuedCheckInTime, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                        .addComponent(jLabelIdIssuedCheckInDate, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(textidnic)
                         .addComponent(txtidname, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)))
                 .addGap(45, 45, 45))
@@ -1404,7 +1522,7 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel24)
                     .addComponent(txtidname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabelIdIssuedCheckInDate, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel47))
@@ -1412,19 +1530,22 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabelIdIssuedCheckInTime, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel48))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addComponent(jButton16)
                 .addGap(15, 15, 15))
         );
 
-        panel_noid.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, 250));
+        panel_noid.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 20, 370, 300));
 
         jPanel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
+        jLabel49.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel49.setText("Lost and Found logs");
 
+        jLabel50.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jLabel50.setText("Search By: ");
 
+        jButton17.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButton17.setText("In Campus");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1432,6 +1553,7 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        jButton20.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButton20.setText("Left");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1439,6 +1561,7 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        jButton21.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButton21.setText("Chronological");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1446,6 +1569,7 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        jButton22.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         jButton22.setText("Clear");
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1481,11 +1605,11 @@ public class MainApplication extends javax.swing.JFrame {
                 .addComponent(jButton21)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton22)
-                .addContainerGap(89, Short.MAX_VALUE))
+                .addContainerGap(204, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 559, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45))
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 748, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(59, 59, 59))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1501,14 +1625,14 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(jButton22))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(33, Short.MAX_VALUE))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
-        panel_noid.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, 760, 540));
+        panel_noid.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 880, 620));
 
         jTabbedPane1.addTab("No ID Issued", panel_noid);
 
-        jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1280, 660));
+        jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 1280, 720));
         jTabbedPane1.getAccessibleContext().setAccessibleName("tab1");
 
         panel_base.add(jPanel1, java.awt.BorderLayout.CENTER);
@@ -2629,6 +2753,8 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
