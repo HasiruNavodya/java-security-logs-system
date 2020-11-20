@@ -240,7 +240,7 @@ public class MainApplication extends javax.swing.JFrame {
         jPanel12 = new javax.swing.JPanel();
         jLabel41 = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
-        jTextField21 = new javax.swing.JTextField();
+        txtIDnicCheckOut = new javax.swing.JTextField();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
         jButton15 = new javax.swing.JButton();
@@ -249,17 +249,23 @@ public class MainApplication extends javax.swing.JFrame {
         jPanel13 = new javax.swing.JPanel();
         jLabel42 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
-        jTextField22 = new javax.swing.JTextField();
+        textidnic = new javax.swing.JTextField();
         jLabel47 = new javax.swing.JLabel();
         jLabel48 = new javax.swing.JLabel();
         jButton16 = new javax.swing.JButton();
         jLabelIdIssuedCheckInDate = new javax.swing.JLabel();
         jLabelIdIssuedCheckInTime = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        txtidname = new javax.swing.JTextField();
         jPanel14 = new javax.swing.JPanel();
         jLabel49 = new javax.swing.JLabel();
         jLabel50 = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<String>();
         jButton17 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jButton22 = new javax.swing.JButton();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jNoIdIssuedTable1 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1278,6 +1284,11 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel45.setText("Time");
 
         jButton15.setText("Submit");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -1286,28 +1297,28 @@ public class MainApplication extends javax.swing.JFrame {
             .addGroup(jPanel12Layout.createSequentialGroup()
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel12Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(jLabel43))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel44, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel45, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabelIdIssuedCheckOutTime, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
+                        .addComponent(jLabelIdIssuedCheckOutDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(txtIDnicCheckOut, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(45, 45, 45))
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel12Layout.createSequentialGroup()
                         .addGap(156, 156, 156)
                         .addComponent(jLabel41))
                     .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel12Layout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(jLabel43))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel12Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel44, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel45, javax.swing.GroupLayout.Alignment.TRAILING))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabelIdIssuedCheckOutTime, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 90, Short.MAX_VALUE)
-                                .addComponent(jLabelIdIssuedCheckOutDate, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addContainerGap())
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addGap(128, 128, 128)
-                .addComponent(jButton15)
+                        .addGap(128, 128, 128)
+                        .addComponent(jButton15)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel12Layout.setVerticalGroup(
@@ -1318,7 +1329,7 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel43)
-                    .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtIDnicCheckOut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
                 .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel44)
@@ -1345,39 +1356,40 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel48.setText("Time");
 
         jButton16.setText("Submit");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16ActionPerformed(evt);
+            }
+        });
+
+        jLabel24.setText("Name");
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(156, 156, 156)
+                .addComponent(jLabel42)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel46)
+                    .addComponent(jLabel24)
+                    .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel47)
+                        .addComponent(jLabel48)))
+                .addGap(18, 36, Short.MAX_VALUE)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel13Layout.createSequentialGroup()
-                                .addGap(19, 19, 19)
-                                .addComponent(jLabel46))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel47, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel48, javax.swing.GroupLayout.Alignment.TRAILING))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabelIdIssuedCheckInTime, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
-                                .addComponent(jLabelIdIssuedCheckInDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(jPanel13Layout.createSequentialGroup()
-                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel13Layout.createSequentialGroup()
-                                .addGap(156, 156, 156)
-                                .addComponent(jLabel42))
-                            .addGroup(jPanel13Layout.createSequentialGroup()
-                                .addGap(128, 128, 128)
-                                .addComponent(jButton16)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                    .addComponent(jButton16)
+                    .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabelIdIssuedCheckInTime, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
+                            .addComponent(jLabelIdIssuedCheckInDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(textidnic)
+                        .addComponent(txtidname, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)))
+                .addGap(45, 45, 45))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1387,18 +1399,22 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel46)
-                    .addComponent(jTextField22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(16, 16, 16)
+                    .addComponent(textidnic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel47)
-                    .addComponent(jLabelIdIssuedCheckInDate, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel24)
+                    .addComponent(txtidname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelIdIssuedCheckInDate, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel47))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel48)
-                    .addComponent(jLabelIdIssuedCheckInTime, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
-                .addGap(53, 53, 53)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelIdIssuedCheckInTime, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel48))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addComponent(jButton16)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGap(15, 15, 15))
         );
 
         panel_noid.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, 250));
@@ -1409,27 +1425,67 @@ public class MainApplication extends javax.swing.JFrame {
 
         jLabel50.setText("Search By: ");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "In Campus", "Left", "Chronological" }));
+        jButton17.setText("In Campus");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17ActionPerformed(evt);
+            }
+        });
 
-        jButton17.setText("Show");
+        jButton20.setText("Left");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
+
+        jButton21.setText("Chronological");
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton21ActionPerformed(evt);
+            }
+        });
+
+        jButton22.setText("Clear");
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton22ActionPerformed(evt);
+            }
+        });
+
+        jNoIdIssuedTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "NIC", "Name", "CheckInDate", "CheckInTime", "CheckOutDate", "CheckOutTime"
+            }
+        ));
+        jScrollPane5.setViewportView(jNoIdIssuedTable1);
 
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(235, 235, 235)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel49)
                     .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(362, 362, 362)
-                        .addComponent(jLabel49))
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(316, 316, 316)
                         .addComponent(jLabel50)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(24, 24, 24)
+                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton17)))
-                .addContainerGap(225, Short.MAX_VALUE))
+                        .addComponent(jButton20)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton21)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton22)
+                .addContainerGap(89, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 559, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1439,9 +1495,13 @@ public class MainApplication extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel50)
-                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton17))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton17)
+                    .addComponent(jButton20)
+                    .addComponent(jButton21)
+                    .addComponent(jButton22))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(33, Short.MAX_VALUE))
         );
 
         panel_noid.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 20, 760, 540));
@@ -2241,6 +2301,208 @@ public class MainApplication extends javax.swing.JFrame {
             }
     }//GEN-LAST:event_jButton18ActionPerformed
 
+    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+        // TODO add your handling code here:
+        try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            
+
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
+
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
+            
+          
+           Date date = new Date();
+           java.sql.Date sqldate= new java.sql.Date(date.getTime());
+            
+            
+            String sql = "Insert into noidissued(NIC,Name,CheckInDate,CheckIntime) Values(?,?,?,?)";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, textidnic.getText());
+            pst.setString(2, txtidname.getText());
+            pst.setDate(3, sqldate);
+            pst.setTimestamp(4, new Timestamp(System.currentTimeMillis()));
+      
+            
+               pst.executeUpdate();
+               JOptionPane.showMessageDialog(null, "Record Inserted Successfully");
+               textidnic.setText("");
+               txtidname.setText("");
+               
+               
+               
+               
+               con.close();
+        
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+    }//GEN-LAST:event_jButton16ActionPerformed
+
+    private void jButton22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22ActionPerformed
+        // TODO add your handling code here:
+         jNoIdIssuedTable1.setModel(new DefaultTableModel(null,new String[]{"NIC","Name","CheckInDate","CheckInTime","CheckOutDate","CheckOutTime"}));
+    }//GEN-LAST:event_jButton22ActionPerformed
+
+    private void jButton21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21ActionPerformed
+        // TODO add your handling code here:
+           try {
+              Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            
+
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
+
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
+            
+            
+            
+            
+            Statement st = con.createStatement();
+            String sql = "Select * from noidissued ORDER BY CheckInTime DESC";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                String nic = rs.getString("NIC");
+                String name  = rs.getString("Name");
+                String checkindate = rs.getString("CheckInDate");
+                String checkintime = rs.getString("CheckInTime");
+                String checkoutdate = rs.getString("CheckOutDate");
+                String checkouttime = rs.getString("CheckOutTime");
+                
+                String tbData[]=  {nic,name,checkindate,checkintime,checkoutdate,checkouttime};
+                DefaultTableModel tblModel = (DefaultTableModel)jNoIdIssuedTable1.getModel();
+                
+                tblModel.addRow(tbData);
+            }
+               
+               con.close();
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+    }//GEN-LAST:event_jButton21ActionPerformed
+
+    private void jButton17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17ActionPerformed
+        // TODO add your handling code here:
+         try {
+              Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            
+
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
+
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
+            
+            
+            
+            
+            Statement st = con.createStatement();
+            String sql = "Select NIC,Name,CheckInDate,CheckInTime from noidissued WHERE CheckOutDate IS NULL AND CheckOutTime IS NULL";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                String nic = rs.getString("NIC");
+                String name  = rs.getString("Name");
+                String checkindate = rs.getString("CheckInDate");
+                String checkintime = rs.getString("CheckInTime");
+                
+                
+                String tbData[]=  {nic,name,checkindate,checkintime};
+                DefaultTableModel tblModel = (DefaultTableModel)jNoIdIssuedTable1.getModel();
+                
+                tblModel.addRow(tbData);
+            }
+               
+               con.close();
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+    }//GEN-LAST:event_jButton17ActionPerformed
+
+    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+        // TODO add your handling code here:
+        try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            
+
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
+
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
+            
+          
+           Date date = new Date();
+           java.sql.Date sqldate= new java.sql.Date(date.getTime());
+            
+            
+            String sql = "UPDATE noidissued set CheckOutDate=?, CheckOutTime=? WHERE NIC=?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, jLabelIdIssuedCheckOutDate.getText());
+            pst.setString(2, jLabelIdIssuedCheckOutTime.getText());
+            pst.setString(3, txtIDnicCheckOut.getText()); 
+            
+           
+      
+            
+               pst.executeUpdate();
+               JOptionPane.showMessageDialog(null, "Record Inserted Successfully");
+               txtIDnicCheckOut.setText("");
+               
+               
+               
+               
+               
+               con.close();
+        
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+    }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        // TODO add your handling code here:
+         try {
+              Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            
+
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
+
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
+            
+            
+            
+            
+            Statement st = con.createStatement();
+            String sql = "Select * from noidissued WHERE CheckOutDate IS NOT NULL AND CheckOutTime IS NOT NULL";
+            ResultSet rs = st.executeQuery(sql);
+            while(rs.next())
+            {
+                String nic = rs.getString("NIC");
+                String name  = rs.getString("Name");
+                String checkindate = rs.getString("CheckInDate");
+                String checkintime = rs.getString("CheckInTime");
+                String checkoutdate = rs.getString("CheckOutDate");
+                String checkouttime = rs.getString("CheckOutTime");
+                
+                String tbData[]=  {nic,name,checkindate,checkintime,checkoutdate,checkouttime};
+                DefaultTableModel tblModel = (DefaultTableModel)jNoIdIssuedTable1.getModel();
+                
+                tblModel.addRow(tbData);
+            }
+               
+               con.close();
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+    }//GEN-LAST:event_jButton20ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2299,6 +2561,9 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -2314,7 +2579,6 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JButton jButtonclear;
     private javax.swing.JButton jButtonfound;
     private javax.swing.JButton jButtonlost;
-    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -2331,6 +2595,7 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
@@ -2378,6 +2643,7 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelVisitorCheckInTime;
     private javax.swing.JLabel jLabelVisitorCheckOutTime;
     private javax.swing.JTable jLostnFoundTable1;
+    private javax.swing.JTable jNoIdIssuedTable1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -2397,9 +2663,8 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTextField jTextField21;
-    private javax.swing.JTextField jTextField22;
     private lu.tudor.santec.jtimechooser.demo.JTimeChooserDemo jTimeChooserDemo1;
     private lu.tudor.santec.jtimechooser.demo.JTimeChooserDemo jTimeChooserDemo2;
     private lu.tudor.santec.jtimechooser.demo.JTimeChooserDemo jTimeChooserDemo3;
@@ -2425,7 +2690,9 @@ public class MainApplication extends javax.swing.JFrame {
     private org.joda.time.Period period1;
     private org.joda.time.format.PeriodFormatterBuilder periodFormatterBuilder1;
     private org.joda.time.format.PeriodFormatterBuilder periodFormatterBuilder2;
+    private javax.swing.JTextField textidnic;
     private javax.swing.JTextField txtCheckOutNIC;
+    private javax.swing.JTextField txtIDnicCheckOut;
     private javax.swing.JTextArea txtInventory;
     private javax.swing.JTextField txtLItemDes;
     private javax.swing.JTextField txtLItemId;
@@ -2445,6 +2712,7 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JTextField txtfitemid;
     private javax.swing.JTextField txtfplace;
     private javax.swing.JTextField txtfuid;
+    private javax.swing.JTextField txtidname;
     private javax.swing.JTextField txtowitemid;
     private javax.swing.JTextField txtownerid;
     private javax.swing.JTextField txtpayndepartnic;
