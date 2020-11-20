@@ -165,12 +165,12 @@ public class Admin extends javax.swing.JFrame {
         
 
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
 
-            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
 
-            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
 
             String sql = "Select * from admin where Name = ? and Password=?";
             PreparedStatement pst = con.prepareStatement(sql);

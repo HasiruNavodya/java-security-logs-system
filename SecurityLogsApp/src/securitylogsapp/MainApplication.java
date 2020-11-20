@@ -1384,12 +1384,12 @@ public class MainApplication extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         
          try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
 
-            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
 
-            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
             
           
            Date date = new Date();
@@ -1436,13 +1436,12 @@ public class MainApplication extends javax.swing.JFrame {
         
         
          try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
 
-            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
 
-            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
-            
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
             
             
             String sql = "UPDATE visitors SET CheckOutTime=? WHERE NIC=?";
@@ -1471,12 +1470,12 @@ public class MainApplication extends javax.swing.JFrame {
         // TODO add your handling code here:
         
          try {
-            Class.forName("com.mysql.jdbc.Driver");
+              Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
 
-            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
 
-            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
             
             
             
@@ -1514,12 +1513,12 @@ public class MainApplication extends javax.swing.JFrame {
     private void jButtonChronologicalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonChronologicalActionPerformed
         // TODO add your handling code here:
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+              Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
 
-            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
 
-            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
             
             
             
@@ -1556,12 +1555,12 @@ public class MainApplication extends javax.swing.JFrame {
     private void jButtonArrivedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonArrivedActionPerformed
         // TODO add your handling code here:
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
 
-            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
 
-            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
             
             
             
@@ -1597,12 +1596,12 @@ public class MainApplication extends javax.swing.JFrame {
     private void jButtonDepartedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDepartedActionPerformed
         // TODO add your handling code here:
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
 
-            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
 
-            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
             
             
             
@@ -1645,12 +1644,12 @@ public class MainApplication extends javax.swing.JFrame {
         // TODO add your handling code here:
         
          try {
-            Class.forName("com.mysql.jdbc.Driver");
+              Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
 
-            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
 
-            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
             
             Date deparDateD=(Date) jlostdate.getDate();
             SimpleDateFormat oDateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -1694,12 +1693,12 @@ public class MainApplication extends javax.swing.JFrame {
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         // TODO add your handling code here:
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+           Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
 
-            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
 
-            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
             
             Date deparDateD=(Date) jfounddate.getDate();
             SimpleDateFormat oDateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -1740,12 +1739,12 @@ public class MainApplication extends javax.swing.JFrame {
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         // TODO add your handling code here:
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+          Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
 
-            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
 
-            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
             
             Date deparDateD=(Date) jowndate.getDate();
             SimpleDateFormat oDateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -1783,13 +1782,12 @@ public class MainApplication extends javax.swing.JFrame {
     private void jButtonlostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonlostActionPerformed
         // TODO add your handling code here:
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+              Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
 
-            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
 
-            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
-            
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
             
             
             
@@ -1828,13 +1826,12 @@ public class MainApplication extends javax.swing.JFrame {
     private void jButtonfoundActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonfoundActionPerformed
         // TODO add your handling code here:
          try {
-            Class.forName("com.mysql.jdbc.Driver");
+           Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
 
-            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
 
-            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
-            
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
             
             
             
@@ -1869,15 +1866,12 @@ public class MainApplication extends javax.swing.JFrame {
     private void jButtonResolvedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonResolvedActionPerformed
         // TODO add your handling code here:
            try {
-            Class.forName("com.mysql.jdbc.Driver");
+             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
 
-            String DB_URL = "jdbc:mysql://localhost:3306/securitylogsapp db?zeroDateTimeBehavior=convertToNull";
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
 
-            Connection con = DriverManager.getConnection(DB_URL, "root", "root");
-            
-            
-            
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
             
             Statement st = con.createStatement();
             String sql = "Select lost.*,found.*,itemowner.* from lost,found,itemowner";
