@@ -63,7 +63,7 @@ public class MainApplication extends javax.swing.JFrame {
       void showTime()
     {
       
-               DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss a");
+               DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm a");
                LocalDateTime now = LocalDateTime.now();
                //visitors CheckIN, CheckOut time
                jLabelVisitorCheckInTime.setText(dtf.format(now));
@@ -159,6 +159,9 @@ public class MainApplication extends javax.swing.JFrame {
         jButtonDeparted = new javax.swing.JButton();
         jButtonChronological = new javax.swing.JButton();
         jButtonClear = new javax.swing.JButton();
+        jLabel58 = new javax.swing.JLabel();
+        jButton23 = new javax.swing.JButton();
+        txtvdeletenic = new javax.swing.JTextField();
         panel_parking = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
@@ -623,6 +626,20 @@ public class MainApplication extends javax.swing.JFrame {
             }
         });
 
+        jLabel58.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jLabel58.setText("Deleter Records:");
+
+        jButton23.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/delete.png"))); // NOI18N
+        jButton23.setText("Delete");
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton23ActionPerformed(evt);
+            }
+        });
+
+        txtvdeletenic.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
@@ -634,21 +651,31 @@ public class MainApplication extends javax.swing.JFrame {
                         .addComponent(jLabel16))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(83, 83, 83)
-                        .addComponent(jLabel17)
-                        .addGap(28, 28, 28)
-                        .addComponent(jButton7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButtonArrived)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonDeparted)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonChronological)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonClear))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGap(54, 54, 54)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 764, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(54, Short.MAX_VALUE))
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 764, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel17)
+                                    .addComponent(jLabel58))
+                                .addGap(28, 28, 28)
+                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
+                                    .addComponent(txtvdeletenic))
+                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel8Layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButton23))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                                        .addGap(13, 13, 13)
+                                        .addComponent(jButtonArrived)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButtonDeparted)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButtonChronological)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jButtonClear)))))))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -663,9 +690,14 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(jButtonDeparted)
                     .addComponent(jButtonChronological)
                     .addComponent(jButtonClear))
-                .addGap(37, 37, 37)
+                .addGap(19, 19, 19)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel58)
+                    .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtvdeletenic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(85, 85, 85))
         );
 
         javax.swing.GroupLayout panel_visitLayout = new javax.swing.GroupLayout(panel_visit);
@@ -2636,6 +2668,37 @@ public class MainApplication extends javax.swing.JFrame {
             }
     }//GEN-LAST:event_jButton20ActionPerformed
 
+    private void jButton23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23ActionPerformed
+        // TODO add your handling code here:
+         
+         try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            
+
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
+
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
+            
+            
+            String sql = "DELETE from visitors WHERE NIC=?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, txtvdeletenic.getText());
+               
+            
+            pst.executeUpdate();
+               JOptionPane.showMessageDialog(null, "Record Deleted Successfully");
+               txtvdeletenic.setText("");
+               
+               
+               con.close();
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+        
+    }//GEN-LAST:event_jButton23ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2697,6 +2760,7 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -2765,6 +2829,7 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -2852,5 +2917,6 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JTextField txtowitemid;
     private javax.swing.JTextField txtownerid;
     private javax.swing.JTextField txtpayndepartnic;
+    private javax.swing.JTextField txtvdeletenic;
     // End of variables declaration//GEN-END:variables
 }
