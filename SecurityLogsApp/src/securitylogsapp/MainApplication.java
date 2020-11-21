@@ -196,6 +196,9 @@ public class MainApplication extends javax.swing.JFrame {
         jButton19 = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         jParkingTable = new javax.swing.JTable();
+        jLabel59 = new javax.swing.JLabel();
+        txtpdeletenic = new javax.swing.JTextField();
+        jButton24 = new javax.swing.JButton();
         panel_lost = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
@@ -542,7 +545,7 @@ public class MainApplication extends javax.swing.JFrame {
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(Submit)
                                     .addComponent(jLabelVisitorCheckOutTime, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
+                                .addGap(0, 142, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
         jPanel7Layout.setVerticalGroup(
@@ -560,7 +563,7 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(jLabelVisitorCheckOutTime, javax.swing.GroupLayout.DEFAULT_SIZE, 22, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Submit)
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -706,9 +709,9 @@ public class MainApplication extends javax.swing.JFrame {
             panel_visitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_visitLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panel_visitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(panel_visitLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -968,6 +971,20 @@ public class MainApplication extends javax.swing.JFrame {
         ));
         jScrollPane4.setViewportView(jParkingTable);
 
+        jLabel59.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jLabel59.setText("Deleter Records:");
+
+        txtpdeletenic.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+
+        jButton24.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton24.setIcon(new javax.swing.ImageIcon(getClass().getResource("/delete.png"))); // NOI18N
+        jButton24.setText("Delete");
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton24ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -978,6 +995,9 @@ public class MainApplication extends javax.swing.JFrame {
                         .addGap(362, 362, 362)
                         .addComponent(jLabel26))
                     .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 794, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(126, 126, 126)
                         .addComponent(jLabel27)
                         .addGap(30, 30, 30)
@@ -987,11 +1007,16 @@ public class MainApplication extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jButton14)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton19))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 794, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(77, Short.MAX_VALUE))
+                        .addComponent(jButton19)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(92, 92, 92)
+                .addComponent(jLabel59)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(txtpdeletenic, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton24)
+                .addGap(437, 437, 437))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1007,9 +1032,14 @@ public class MainApplication extends javax.swing.JFrame {
                         .addComponent(jButton14)
                         .addComponent(jButton18)
                         .addComponent(jButton19)))
-                .addGap(31, 31, 31)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel59)
+                    .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtpdeletenic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addGap(33, 33, 33))
         );
 
         javax.swing.GroupLayout panel_parkingLayout = new javax.swing.GroupLayout(panel_parking);
@@ -1278,7 +1308,7 @@ public class MainApplication extends javax.swing.JFrame {
                         .addComponent(txtownerid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton13)))
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1675,7 +1705,7 @@ public class MainApplication extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("No ID Issued", panel_noid);
 
-        jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 1280, 730));
+        jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1280, 690));
         jTabbedPane1.getAccessibleContext().setAccessibleName("tab1");
 
         panel_base.add(jPanel1, java.awt.BorderLayout.CENTER);
@@ -2212,7 +2242,7 @@ public class MainApplication extends javax.swing.JFrame {
             Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
             
             Statement st = con.createStatement();
-            String sql = "Select lost.*,found.*,itemowner.* from lost,found,itemowner";
+            String sql = "SELECT l.id,l.itemid,l.itemdsc,l.place,l.date,f.foundplace,f.founddate,o.ownerid,o.owndate From lost l INNER JOIN found f ON l.itemid=f.itemid INNER JOIN itemowner o  ON f.itemid=o.itemid;";
             ResultSet rs = st.executeQuery(sql);
             while(rs.next())
             {
@@ -2699,6 +2729,38 @@ public class MainApplication extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton23ActionPerformed
 
+    private void jButton24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24ActionPerformed
+        // TODO add your handling code here:
+         
+         try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            
+
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
+
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
+            
+            
+            String sql = "DELETE from parking WHERE NIC=?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, txtpdeletenic.getText());
+               
+            
+            pst.executeUpdate();
+               JOptionPane.showMessageDialog(null, "Record Deleted Successfully");
+               txtpdeletenic.setText("");
+               
+               
+               con.close();
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+        
+        
+    }//GEN-LAST:event_jButton24ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2761,6 +2823,7 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton22;
     private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -2830,6 +2893,7 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel56;
     private javax.swing.JLabel jLabel57;
     private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -2917,6 +2981,7 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JTextField txtowitemid;
     private javax.swing.JTextField txtownerid;
     private javax.swing.JTextField txtpayndepartnic;
+    private javax.swing.JTextField txtpdeletenic;
     private javax.swing.JTextField txtvdeletenic;
     // End of variables declaration//GEN-END:variables
 }
