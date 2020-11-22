@@ -278,6 +278,9 @@ public class MainApplication extends javax.swing.JFrame {
         jButton22 = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
         jNoIdIssuedTable1 = new javax.swing.JTable();
+        jButton26 = new javax.swing.JButton();
+        txtiddeleteitenic = new javax.swing.JTextField();
+        jLabel61 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -1706,28 +1709,51 @@ public class MainApplication extends javax.swing.JFrame {
         ));
         jScrollPane5.setViewportView(jNoIdIssuedTable1);
 
+        jButton26.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/delete.png"))); // NOI18N
+        jButton26.setText("Delete");
+        jButton26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton26ActionPerformed(evt);
+            }
+        });
+
+        txtiddeleteitenic.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
+
+        jLabel61.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jLabel61.setText("Deleter Records:");
+
         javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
         jPanel14.setLayout(jPanel14Layout);
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                .addContainerGap(71, Short.MAX_VALUE)
+                .addContainerGap(94, Short.MAX_VALUE)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 748, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(59, 59, 59))
+                .addGap(36, 36, 36))
             .addGroup(jPanel14Layout.createSequentialGroup()
-                .addGap(235, 235, 235)
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel49)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addComponent(jLabel50)
-                        .addGap(24, 24, 24)
-                        .addComponent(jButton17)
+                        .addGap(235, 235, 235)
+                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel49)
+                            .addGroup(jPanel14Layout.createSequentialGroup()
+                                .addComponent(jLabel50)
+                                .addGap(24, 24, 24)
+                                .addComponent(jButton17)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton21)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton21)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton22)
+                        .addComponent(jButton22))
+                    .addGroup(jPanel14Layout.createSequentialGroup()
+                        .addGap(202, 202, 202)
+                        .addComponent(jLabel61)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtiddeleteitenic, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton26)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel14Layout.setVerticalGroup(
@@ -1743,8 +1769,13 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(jButton21)
                     .addComponent(jButton22))
                 .addGap(18, 18, 18)
+                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel61)
+                    .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtiddeleteitenic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addGap(35, 35, 35))
         );
 
         panel_noid.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 880, 620));
@@ -2836,6 +2867,37 @@ public class MainApplication extends javax.swing.JFrame {
             }
     }//GEN-LAST:event_jButton25ActionPerformed
 
+    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
+        // TODO add your handling code here:
+        try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            
+
+            String DB_URL = "jdbc:sqlserver://MSI:1433;databaseName=Securitylogsapp db";
+
+            Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
+            
+            
+            String sql = "DELETE from noidissued WHERE NIC=?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, txtiddeleteitenic.getText());
+               
+            
+            pst.executeUpdate();
+               JOptionPane.showMessageDialog(null, "Record Deleted Successfully");
+               txtiddeleteitenic.setText("");
+               
+               
+               con.close();
+        }
+        
+            catch(Exception e) {
+                JOptionPane.showMessageDialog(null,e);
+            }
+        
+        
+    }//GEN-LAST:event_jButton26ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -2900,6 +2962,7 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JButton jButton23;
     private javax.swing.JButton jButton24;
     private javax.swing.JButton jButton25;
+    private javax.swing.JButton jButton26;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
@@ -2972,6 +3035,7 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -3054,6 +3118,7 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JTextField txtfitemid;
     private javax.swing.JTextField txtfplace;
     private javax.swing.JTextField txtfuid;
+    private javax.swing.JTextField txtiddeleteitenic;
     private javax.swing.JTextField txtidname;
     private javax.swing.JTextField txtldeleteitemid;
     private javax.swing.JTextField txtowitemid;
