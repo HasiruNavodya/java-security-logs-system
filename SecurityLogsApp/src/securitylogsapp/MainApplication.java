@@ -403,7 +403,7 @@ public class MainApplication extends javax.swing.JFrame {
         txtPhoneNo.setFont(new java.awt.Font("Comic Sans MS", 0, 12)); // NOI18N
 
         jButton6.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tick.png"))); // NOI18N
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/select.png"))); // NOI18N
         jButton6.setText("Submit");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -518,7 +518,7 @@ public class MainApplication extends javax.swing.JFrame {
         jLabelVisitorCheckOutTime.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
 
         Submit.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
-        Submit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/tick.png"))); // NOI18N
+        Submit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/select.png"))); // NOI18N
         Submit.setText("Submit");
         Submit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -657,31 +657,28 @@ public class MainApplication extends javax.swing.JFrame {
                         .addComponent(jLabel16))
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addGap(83, 83, 83)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 764, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel17)
+                            .addComponent(jLabel58))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 764, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtvdeletenic, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addGap(22, 22, 22)
-                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel17)
-                                    .addComponent(jLabel58))
-                                .addGap(28, 28, 28)
-                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
-                                    .addComponent(txtvdeletenic))
-                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel8Layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButton23))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                                        .addGap(13, 13, 13)
-                                        .addComponent(jButtonArrived)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButtonDeparted)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButtonChronological)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jButtonClear)))))))
-                .addContainerGap(24, Short.MAX_VALUE))
+                                .addComponent(jButtonArrived)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonDeparted)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonChronological)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jButtonClear))
+                            .addComponent(jButton23))))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -757,6 +754,7 @@ public class MainApplication extends javax.swing.JFrame {
         txtPspotNo.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
 
         jButton8.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/car-parking.png"))); // NOI18N
         jButton8.setText("Park");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -803,8 +801,8 @@ public class MainApplication extends javax.swing.JFrame {
                 .addContainerGap(47, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(134, 134, 134))
+                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(99, 99, 99))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -831,9 +829,9 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ParkingCheckInDate)
                     .addComponent(txtPcheckInDate, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton8)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -850,6 +848,7 @@ public class MainApplication extends javax.swing.JFrame {
         txtpayndepartnic.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
 
         jButton9.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/coin.png"))); // NOI18N
         jButton9.setText("Pay");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -892,10 +891,11 @@ public class MainApplication extends javax.swing.JFrame {
                                 .addComponent(jLabelParkingCheckOutTime, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(txtpayndepartnic, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))
                             .addComponent(jLabelParkingCheckOutDate, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(txtPfee, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jButton9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                                    .addGap(10, 10, 10)
+                                    .addComponent(txtPfee, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(59, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -933,6 +933,7 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel27.setText("Search By: ");
 
         jButton10.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/parking.png"))); // NOI18N
         jButton10.setText("Parked");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -941,6 +942,7 @@ public class MainApplication extends javax.swing.JFrame {
         });
 
         jButton14.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logout.png"))); // NOI18N
         jButton14.setText("Took off");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -949,6 +951,7 @@ public class MainApplication extends javax.swing.JFrame {
         });
 
         jButton18.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bowman.png"))); // NOI18N
         jButton18.setText("By Spot Number");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -957,6 +960,7 @@ public class MainApplication extends javax.swing.JFrame {
         });
 
         jButton19.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clear.png"))); // NOI18N
         jButton19.setText("Clear");
         jButton19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1040,7 +1044,7 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(jLabel59)
                     .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtpdeletenic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33))
         );
@@ -1091,6 +1095,7 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel10.setText("Item ID");
 
         jButton11.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/add.png"))); // NOI18N
         jButton11.setText("Add lost item");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1176,6 +1181,7 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel36.setText("Found Place");
 
         jButton12.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/report.png"))); // NOI18N
         jButton12.setText("Report found item");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1258,6 +1264,7 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel38.setText("Owner UID");
 
         jButton13.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/not-found.png"))); // NOI18N
         jButton13.setText("Found owner");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1311,7 +1318,7 @@ public class MainApplication extends javax.swing.JFrame {
                         .addComponent(txtownerid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton13)))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         jPanel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -1323,6 +1330,7 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel40.setText("Search By: ");
 
         jButtonlost.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButtonlost.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lostff.png"))); // NOI18N
         jButtonlost.setText("Lost");
         jButtonlost.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1331,6 +1339,7 @@ public class MainApplication extends javax.swing.JFrame {
         });
 
         jButtonfound.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButtonfound.setIcon(new javax.swing.ImageIcon(getClass().getResource("/lost-items.png"))); // NOI18N
         jButtonfound.setText("Found");
         jButtonfound.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1339,6 +1348,7 @@ public class MainApplication extends javax.swing.JFrame {
         });
 
         jButtonResolved.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButtonResolved.setIcon(new javax.swing.ImageIcon(getClass().getResource("/seo.png"))); // NOI18N
         jButtonResolved.setText("Resolved");
         jButtonResolved.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1347,6 +1357,7 @@ public class MainApplication extends javax.swing.JFrame {
         });
 
         jButtonclear.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButtonclear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clear.png"))); // NOI18N
         jButtonclear.setText("Clear");
         jButtonclear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1482,6 +1493,7 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel45.setText("Time");
 
         jButton15.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/select.png"))); // NOI18N
         jButton15.setText("Submit");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1571,6 +1583,7 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel48.setText("Time");
 
         jButton16.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/select.png"))); // NOI18N
         jButton16.setText("Submit");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1624,7 +1637,7 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel24)
                     .addComponent(txtidname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabelIdIssuedCheckInDate, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel47))
@@ -1632,7 +1645,7 @@ public class MainApplication extends javax.swing.JFrame {
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabelIdIssuedCheckInTime, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel48))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
                 .addComponent(jButton16)
                 .addGap(15, 15, 15))
         );
@@ -1648,6 +1661,7 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel50.setText("Search By: ");
 
         jButton17.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/log-in.png"))); // NOI18N
         jButton17.setText("In Campus");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1656,6 +1670,7 @@ public class MainApplication extends javax.swing.JFrame {
         });
 
         jButton20.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logout.png"))); // NOI18N
         jButton20.setText("Left");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1664,6 +1679,7 @@ public class MainApplication extends javax.swing.JFrame {
         });
 
         jButton21.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clock.png"))); // NOI18N
         jButton21.setText("Chronological");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1672,6 +1688,7 @@ public class MainApplication extends javax.swing.JFrame {
         });
 
         jButton22.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
+        jButton22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clear.png"))); // NOI18N
         jButton22.setText("Clear");
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -1704,9 +1721,9 @@ public class MainApplication extends javax.swing.JFrame {
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addComponent(jLabel50)
                         .addGap(24, 24, 24)
-                        .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton20)))
+                        .addComponent(jButton17)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton21)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1727,7 +1744,7 @@ public class MainApplication extends javax.swing.JFrame {
                     .addComponent(jButton22))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(109, Short.MAX_VALUE))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
 
         panel_noid.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 20, 880, 620));
