@@ -119,7 +119,6 @@ public class MainApplication extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
         jLabel56 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
@@ -348,16 +347,6 @@ public class MainApplication extends javax.swing.JFrame {
         });
         panel_left.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 190, 191, 49));
         jButton4.getAccessibleContext().setAccessibleName("jButtonLostNFound");
-
-        jButton5.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
-        jButton5.setText("Extra");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
-            }
-        });
-        panel_left.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 191, 50));
-        jButton5.getAccessibleContext().setAccessibleName("jButtonExtra");
 
         jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/window-1231894_1920.jpg"))); // NOI18N
         panel_left.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 190, 700));
@@ -1821,11 +1810,6 @@ public class MainApplication extends javax.swing.JFrame {
         jTabbedPane1.setSelectedIndex(2);
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-        jTabbedPane1.setSelectedIndex(4);
-    }//GEN-LAST:event_jButton5ActionPerformed
-
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         
          try {
@@ -2967,7 +2951,6 @@ public class MainApplication extends javax.swing.JFrame {
     private javax.swing.JButton jButton26;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
