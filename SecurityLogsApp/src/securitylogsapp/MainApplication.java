@@ -2840,6 +2840,8 @@ public class MainApplication extends javax.swing.JFrame {
 
     private void jButton25ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25ActionPerformed
         // TODO add your handling code here:
+        //needs to connect 3 tables together
+        
          try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             
@@ -2849,7 +2851,7 @@ public class MainApplication extends javax.swing.JFrame {
             Connection con = DriverManager.getConnection(DB_URL, "sa", "root");
             
             
-            String sql = "DELETE from lost,found,itemowner WHERE itemid=?";
+            String sql = "DELETE lost,found,itemowner from lost LEFT join found on lost.itemid = found.itemid LEFT join itemowner on found.itemid = itemowner.itemid WHERE lost.itemid =? ;";
             PreparedStatement pst = con.prepareStatement(sql);
             pst.setString(1, txtldeleteitemid.getText());
                
