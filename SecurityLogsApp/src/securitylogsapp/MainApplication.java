@@ -291,9 +291,9 @@ public class MainApplication extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Welcome to Security Logs System");
+        jLabel1.setText(" Security Logs System");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        panel_top.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 0, 620, 90));
+        panel_top.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 620, 90));
 
         jLabel55.setIcon(new javax.swing.ImageIcon(getClass().getResource("/window-1231894_1920.jpg"))); // NOI18N
         jLabel55.setText("jLabel55");
