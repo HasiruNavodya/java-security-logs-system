@@ -77,7 +77,7 @@ public class Admin extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Welcome to Security Logs App");
+        jLabel1.setText("Welcome to Security Logs System");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 55, -1, -1));
 
